@@ -1,60 +1,68 @@
-const typesData = [
-  {
-    img: 'images/type-last.png',
-    desc: 'A single-piece last ideal for durability and classic footwear molding.'
-  },
-  {
-    img: 'images/type-last.png',
-    desc: 'Open-back last with scooped heel for easy removal and better airflow.'
-  },
-  {
-    img: 'images/type-last.png',
-    desc: 'Hinged last for complex assembly with secure fit and precise alignment.'
-  },
-  {
-    img: 'images/type-last.png',
-    desc: 'Automatic sliding hinge mechanism for rapid prototyping.'
-  },
-  {
-    img: 'images/type-last.png',
-    desc: 'Step-cut hinge last combining firm support with ease of removal.'
-  },
-  {
-    img: 'images/type-last.png',
-    desc: 'Straight-V cut last engineered for specialized orthotic applications.'
-  }
-];
+//  types of last section here
+ const listItems = document.querySelectorAll('.custom-list-item');
+const shoeImage = document.querySelector('.shoe-image');
+const imageText = document.querySelector('.image-text');
 
-let current = 0;
-const lis = document.querySelectorAll('.last-types li');
-const imgEl = document.getElementById('lastImage');
-const descEl = document.getElementById('lastDescription');
+let currentIndex = 0;
+let autoTimer;
 
-function showType(index) {
-  lis[current].classList.remove('active');
-  current = index;
-  lis[current].classList.add('active');
-  imgEl.src = typesData[current].img;
-  descEl.textContent = typesData[current].desc;
+function resetProgressBars() {
+  listItems.forEach(item => {
+    const bar = item.querySelector('.progress-bar-line');
+    bar.style.transition = 'none';
+    bar.style.width = '0%';
+  });
 }
 
-lis.forEach((li, index) => {
-  li.addEventListener('click', () => {
-    showType(index);
-    resetAuto();
+function animateProgressBar(index, duration = 5000) {
+  const bar = listItems[index].querySelector('.progress-bar-line');
+  setTimeout(() => {
+    bar.style.transition = `width ${duration}ms linear`;
+    bar.style.width = '100%';
+  }, 10);
+}
+
+function updateDisplay(index) {
+  const item = listItems[index];
+  const newImage = item.getAttribute('data-image');
+  const newText = item.getAttribute('data-text');
+
+  shoeImage.src = newImage;
+  imageText.innerHTML = newText;
+
+  listItems.forEach(li => li.classList.remove('active'));
+  item.classList.add('active');
+
+  resetProgressBars();
+  animateProgressBar(index);
+
+  currentIndex = index;
+}
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % listItems.length;
+  updateDisplay(currentIndex);
+}
+
+function startAutoPlay() {
+  updateDisplay(currentIndex);
+  autoTimer = setInterval(nextSlide, 5000);
+}
+
+function stopAutoPlay() {
+  clearInterval(autoTimer);
+}
+
+listItems.forEach((item, index) => {
+  item.addEventListener('click', () => {
+    stopAutoPlay();
+    updateDisplay(index);
+    setTimeout(startAutoPlay, 6000);
   });
 });
 
-let auto = setInterval(() => {
-  showType((current + 1) % typesData.length);
-}, 6000);
+startAutoPlay();
 
-function resetAuto() {
-  clearInterval(auto);
-  auto = setInterval(() => {
-    showType((current + 1) % typesData.length);
-  }, 6000);
-}
 
 // about us tab functionality
 const tabs = document.querySelectorAll('.tab');

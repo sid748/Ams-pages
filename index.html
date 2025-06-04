@@ -12,19 +12,19 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link rel="stylesheet" type="text/css"
     href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-<!-- Pop up  -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
-<!-- aos link here -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Pop up  -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+  <!-- aos link here -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 
- 
+
 
 </head>
 
 <body>
 
- <div class="container-fluid hero-wrapper">
+  <div class="container-fluid hero-wrapper" id="hero-wrapper">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid d-flex">
@@ -36,156 +36,191 @@
         </button>
         <div class="collapse navbar-collapse justify-content-evenly" id="navbarNav">
           <ul class="navbar-nav align-items-center">
-            <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">ABOUT</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">PRODUCTS</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">PROCESS</a></li>
+            <li class="nav-item"><a class="nav-link" href="#hero-wrapper">HOME</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about-container">ABOUT</a></li>
+            <li class="nav-item"><a class="nav-link" href="#shoe-last-section">PRODUCTS</a></li>
+            <li class="nav-item"><a class="nav-link" href="#video-section">PROCESS</a></li>
             <li class="nav-item"><a class="nav-link" href="#">SPECIALITY</a></li>
           </ul>
         </div>
         <div class="justify-content-between d-flex align-items-center">
-          <a class="btn btn-contact ms-3" href="contact.html"><span>Contact Us</span><i class="fa-solid fa-arrow-right ms-2"></i></a>
+          <a class="btn btn-contact ms-3" href="contact.html"><span>Contact Us</span><i
+              class="fa-solid fa-arrow-right ms-2"></i></a>
         </div>
       </div>
     </nav>
 
     <!-- Hero Content -->
-   <div class="container position-relative z-1 hero-new">
-  <div class="row justify-content-start">
-    <div class="col-lg-6 hero-text">
-      <h1>Precision-Crafted Shoe<br>Lasts. Engineered in India,<br>Trusted Worldwide.</h1>
-      <p>Serving leading footwear manufacturers with advanced CAD/CAM & mechanical styles. Know more about us.</p>
-      
-      <!-- Wrap button in a div for left alignment -->
-      <div class="text-start">
-        <a href="#" class="hero-btn">View Products <i class="fa-solid fa-arrow-right"></i></a>
+    <div class="container position-relative z-1 hero-new">
+      <div class="row justify-content-start">
+        <div class="col-lg-6 hero-text">
+          <h1>Precision-Crafted Shoe<br>Lasts. Engineered in India,<br>Trusted Worldwide.</h1>
+          <p>Serving leading footwear manufacturers with advanced CAD/CAM & mechanical styles. Know more about us.</p>
+
+          <!-- Wrap button in a div for left alignment -->
+          <div class="text-start">
+            <a href="#shoe-last-section" class="hero-btn">View Products <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
     <!-- Hero Image Floating Outside -->
     <div class="hero-image">
       <img src="images/Last.png" alt="Shoe Last Image" />
     </div>
   </div>
-  
-  <!-- About Us section here -->
-<div class="about-container">
-  <div class="about-left ">
-    <h6 class="text-uppercase">About Us</h6>
-    <h2 data-aos="fade-right" data-aos-duration="3000">
-      Setting the Standard in Precision <span class="highlight">Shoe Last</span> Manufacturing
-    </h2>
-    <p class="sub-para">
-      A trusted name in the footwear industry, delivering precision-crafted shoe lasts to the nation’s top brands.
-    </p>
 
-    <div class="tabs">
-      <div class="tab active" data-index="0">Our History</div>
-      <div class="tab" data-index="1">Our Mission</div>
-      <div class="tab" data-index="2">Our Vision</div>
+  <!-- About Us section here -->
+  <div class="about-container" id="about-container">
+    <div class="about-left ">
+      <h6 class="text-uppercase">About Us</h6>
+      <h2 data-aos="fade-right" data-aos-duration="3000">
+        Setting the Standard in Precision <span class="highlight">Shoe Last</span> Manufacturing
+      </h2>
+      <p class="sub-para">
+        A trusted name in the footwear industry, delivering precision-crafted shoe lasts to the nation’s top brands.
+      </p>
+
+      <div class="tabs">
+        <div class="tab active" data-index="0">Our History</div>
+        <div class="tab" data-index="1">Our Mission</div>
+        <div class="tab" data-index="2">Our Vision</div>
+      </div>
+
+      <p class="tab-content" id="tabText">
+        Since 2017, AMS Components Industries has delivered high-quality plastic shoe lasts to leading footwear brands
+        across India. With advanced manufacturing, technical expertise, and a customer-first approach, we help shape the
+        future of reliable footwear solutions.
+      </p>
     </div>
 
-    <p class="tab-content" id="tabText">
-      Since 2017, AMS Components Industries has delivered high-quality plastic shoe lasts to leading footwear brands across India. With advanced manufacturing, technical expertise, and a customer-first approach, we help shape the future of reliable footwear solutions.
-    </p>
-  </div>
-
-  <div class="about-right">
-    <div class="image-box-wrapper">
-      <div class="bg-box"></div>
-      <div class="image-box">
-        <img id="tabImage" src="images/About-us.png" alt="Tab Image" />
+    <div class="about-right">
+      <div class="image-box-wrapper">
+        <div class="bg-box"></div>
+        <div class="image-box">
+          <img id="tabImage" src="images/About-us.png" alt="Tab Image" />
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 
   <!-- counter section here -->
- <section class="why-choose-us" id="counter-section">
-  <div class="container">
-    <p class="section-subtitle">WHY CHOOSE US</p>
-    <h2 class="section-title">Leading Brands Choose <span class="highlight">AMS Lasts</span></h2>
-    <p class="section-description">
-      We combine technology, expertise, and innovation to deliver unmatched precision and durability.
-    </p>
+  <section class="why-choose-us" id="counter-section">
+    <div class="container">
+      <p class="section-subtitle">WHY CHOOSE US</p>
+      <h2 class="section-title">Leading Brands Choose <span class="highlight">AMS Lasts</span></h2>
+      <p class="section-description">
+        We combine technology, expertise, and innovation to deliver unmatched precision and durability.
+      </p>
 
-    <div class="stats-grid">
-      <div class="stat-card">
-        <h3 class="stat-number" data-target="17" data-suffix="+">
-          <span class="number">0</span><span class="suffix">+</span>
-        </h3>
-        <p>A wide range of designs to suit diverse footwear needs.</p>
-      </div>
-      <div class="stat-card">
-        <h3 class="stat-number" data-target="150" data-suffix="+">
-          <span class="number">0</span><span class="suffix">+</span>
-        </h3>
-        <p><strong>Clients</strong><br>Served across India’s leading footwear and safety shoe brands.</p>
-      </div>
-      <div class="stat-card">
-        <h3 class="stat-number" data-target="100" data-suffix="K">
-          <span class="number">0</span><span class="suffix">K</span>
-        </h3>
-        <p><strong>Units</strong><br>Produced annually with precision and quality assurance.</p>
-      </div>
-      <div class="stat-card">
-        <h3 class="stat-number" data-target="10" data-suffix="+">
-          <span class="number">0</span><span class="suffix">+</span>
-        </h3>
-        <p><strong>Years</strong><br>Designed to meet diverse industrial and fashion footwear needs.</p>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h3 class="stat-number" data-target="17" data-suffix="+">
+            <span class="number">0</span><span class="suffix">+</span>
+          </h3>
+          <p>A wide range of designs to suit diverse footwear needs.</p>
+        </div>
+        <div class="stat-card">
+          <h3 class="stat-number" data-target="150" data-suffix="+">
+            <span class="number">0</span><span class="suffix">+</span>
+          </h3>
+          <p><strong>Clients</strong><br>Served across India’s leading footwear and safety shoe brands.</p>
+        </div>
+        <div class="stat-card">
+          <h3 class="stat-number" data-target="100" data-suffix="K">
+            <span class="number">0</span><span class="suffix">K</span>
+          </h3>
+          <p><strong>Units</strong><br>Produced annually with precision and quality assurance.</p>
+        </div>
+        <div class="stat-card">
+          <h3 class="stat-number" data-target="10" data-suffix="+">
+            <span class="number">0</span><span class="suffix">+</span>
+          </h3>
+          <p><strong>Years</strong><br>Designed to meet diverse industrial and fashion footwear needs.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- Types of last here -->
-<section class="shoe-lasts-section">
-  <div class="section-header">
-    <p class="sub-heading">OUR PRODUCTS</p>
-    <h2 class="main-heading">Types of <span>Shoe Lasts</span> We Manufacture</h2>
-  </div>
-  <div class="content-wrapper">
-    <ul class="last-types">
-      <li class="active" data-index="0">
-        <span>01.</span>
-        <strong>Solid Last</strong>
-        <i class="arrow">&rarr;</i>
-      </li>
-      <li data-index="1"><span>02.</span> Scoop Cut Last</li>
-      <li data-index="2"><span>03.</span> Connectional Hinge Last</li>
-      <li data-index="3"><span>04.</span> Slidomatic Hinge Last</li>
-      <li data-index="4"><span>05.</span> Slidomatic Step Cut Hinge Last</li>
-      <li data-index="5"><span>06.</span> Slidomatic Straight V Cut Last</li>
-    </ul>
-    <div class="image-box-old">
-      <div class="image-overlay"></div>
-      <img id="lastImage" src="images/type-last.png" alt="Solid Last">
-      <p id="lastDescription" class="desc">A single-piece last ideal for durability and classic footwear molding.</p>
-      <a href="contact.html" class="contact-btn">Contact Us <span>&rarr;</span></a>
-    </div>
-  </div>
-</section>
+  <!-- Types of last here -->
+   <section class="shoe-last-section" id="shoe-last-section">
+    <section class="container">
+      <p class="sub-title">Our Products</p>
+      <h2 class="section-title pb-2">
+        Types of <span class="highlight">Shoe Lasts</span> We Manufacture
+      </h2>
+      <section class="row">
+        <!-- Left: List -->
+        <div class="col-lg-5 content-new">
+          <ul class="custom-list">
+            <li class="custom-list-item active" data-image="images/type-last.png" data-text="A single-piece last ideal for durability<br />and classic footwear molding.">
+              <span>01.</span> <strong>Solid Last</strong> <i class="fa-solid fa-arrow-right"></i>
+              <span class="progress-bar-line"></span>
+            </li>
+            <li class="custom-list-item" data-image="images/type-last.png" data-text="Perfect for fashion footwear with scoop-shaped designs.">
+              <span>02.</span> Scoop Cut Last <i class="fa-solid fa-arrow-right"></i>
+              <span class="progress-bar-line"></span>
+            </li>
+            <li class="custom-list-item" data-image="images/type-last.png" data-text="Durable and versatile hinge design for easy molding.">
+              <span>03.</span> Connectional Hinge Last <i class="fa-solid fa-arrow-right"></i>
+              <span class="progress-bar-line"></span>
+            </li>
+            <li class="custom-list-item" data-image="images/type-last.png" data-text="Smart sliding design ideal for athletic footwear.">
+              <span>04.</span> Slidomatic Hinge Last <i class="fa-solid fa-arrow-right"></i>
+              <span class="progress-bar-line"></span>
+            </li>
+            <li class="custom-list-item" data-image="images/type-last.png" data-text="Engineered for superior cut and comfort in step designs.">
+              <span>05.</span> Slidomatic Step Cut Hinge Last <i class="fa-solid fa-arrow-right"></i>
+              <span class="progress-bar-line"></span>
+            </li>
+            <li class="custom-list-item" data-image="images/type-last.png" data-text="Precision-crafted straight V cut for sleek shoes.">
+              <span>06.</span> Slidomatic Straight V Cut Last <i class="fa-solid fa-arrow-right"></i>
+              <span class="progress-bar-line"></span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right: Image and Background -->
+        <div class="col-lg-7 images-new">
+          <div class="bg-diagonal bg-1"></div>
+          <div class="bg-diagonal bg-2"></div>
+
+          <div class="image-wrapper">
+            <img src="images/type-last.png" class="img-fluid shoe-image" alt="Shoe Last" />
+            <p class="image-text">
+              A single-piece last ideal for durability<br />
+              and classic footwear molding.
+            </p>
+            <a href="contact.html" class="btn-contact">
+              Contact Us <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </section>
+  </section>
+
 
   <!-- video section here -->
-   <section class="video-section">
-  <div class="video-wrapper">
-    <img src="images/video-thumbnail.png" alt="AMS Video" class="video-thumbnail">
-    <a href="https://youtu.be/XW6jfGYUHMc?si=9mvK3p-799dukd6b" target="_blank" class="play-button" aria-label="Play video"></a>
-  </div>
-</section>
+  <section class="video-section" id="video-section">
+    <div class="video-wrapper">
+      <img src="images/video-thumbnail.png" alt="AMS Video" class="video-thumbnail">
+      <a href="https://youtu.be/XW6jfGYUHMc?si=9mvK3p-799dukd6b" target="_blank" class="play-button"
+        aria-label="Play video"></a>
+    </div>
+  </section>
 
   <!-- sector served -->
 
-  <section class="industry-section">
+  <section class="industry-section" id="industry-section">
     <div class="container">
       <div class="row g-4">
-      <h6 class="">SECTORS SERVED</h6>
-    <h2 class=" mt-0"><span>Industries</span> We Serve In</h2>
-  
+        <h6 class="">SECTORS SERVED</h6>
+        <h2 class=" mt-0"><span>Industries</span> We Serve In</h2>
+
         <!-- Card 1 -->
         <div class="col-md-6 col-lg-3">
           <div class="industry-card">
@@ -248,11 +283,12 @@
 
       </div>
 
-   <button class="contact-btn mt-5 me-3">
-  <a href="contact.html"><span class="hover-arrow-left"><i class="fa-solid fa-arrow-right me-2"></i></span>
-  <span class="btn-text">Contact Us</span>
-  <span class="hover-arrow-right"><i class="fa-solid fa-arrow-right ms-2"></i></span></a>
-</button>
+      <button class="contact-btn mt-5 me-3 ">
+        <a href="contact.html" class="text-decoration-none"><span class="hover-arrow-left"><i
+              class="fa-solid fa-arrow-right me-2"></i></span>
+          <span class="btn-text">Contact Us</span>
+          <span class="hover-arrow-right"><i class="fa-solid fa-arrow-right ms-2"></i></span></a>
+      </button>
 
 
 
@@ -262,158 +298,172 @@
   </section>
 
   <!-- testimonial section slider section -->
-   <section class="testimonial-section text-center">
-  <div class="container">
-    <h6>Testimonials</h6>
-    <h2>What <span>Our Partners</span> Say About Us</h2>
-    <div class="testimonial-slider mt-4">
-      <!-- Slide 1 -->
-      <div>
-        <div class="testimonial-card">
-          <div class="top">
-            <div class="profile">
-              <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Rahul Sharma">
-              <div class="profile-info">
-                <h5>Rahul Sharma</h5>
-                <span>Managing Director</span>
+  <section class="testimonial-section text-center" id="testimonial-section">
+    <div class="container">
+      <h6>Testimonials</h6>
+      <h2>What <span>Our Partners</span> Say About Us</h2>
+      <div class="testimonial-slider mt-4">
+        <!-- Slide 1 -->
+        <div>
+          <div class="testimonial-card">
+            <div class="top">
+              <div class="profile">
+                <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Rahul Sharma">
+                <div class="profile-info">
+                  <h5>Rahul Sharma</h5>
+                  <span>Managing Director</span>
+                </div>
               </div>
+              <img src="images/puma-logo.png" alt="Puma" style="height: 25px;">
             </div>
-            <img src="images/puma-logo.png" alt="Puma" style="height: 25px;">
+            <p>
+              AMS Components Industries has been an invaluable partner in our footwear production journey. Their
+              precision-engineered plastic shoe lasts have consistently met our exacting standards, ensuring a perfect
+              fit and durability in every pair we produce.
+            </p>
+            <div class="quote-icon">”</div>
           </div>
-          <p>
-            AMS Components Industries has been an invaluable partner in our footwear production journey. Their precision-engineered plastic shoe lasts have consistently met our exacting standards, ensuring a perfect fit and durability in every pair we produce.
-          </p>
-          <div class="quote-icon">”</div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div>
+          <div class="testimonial-card">
+            <div class="top">
+              <div class="profile">
+                <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Gaurav Devgon">
+                <div class="profile-info">
+                  <h5>Gaurav Devgon</h5>
+                  <span>Managing Director</span>
+                </div>
+              </div>
+              <img src="images/campus-logo.png" alt="Campus" style="height: 25px;">
+            </div>
+            <p>
+              AMS Components Industries has been an invaluable partner in our footwear production journey. Their
+              precision-engineered plastic shoe lasts have consistently met our exacting standards, ensuring a perfect
+              fit and durability in every pair we produce.
+            </p>
+            <div class="quote-icon">”</div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div>
+          <div class="testimonial-card">
+            <div class="top">
+              <div class="profile">
+                <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Rahul Sharma">
+                <div class="profile-info">
+                  <h5>Rahul Sharma</h5>
+                  <span>Managing Director</span>
+                </div>
+              </div>
+              <img src="images/puma-logo.png" alt="Puma" style="height: 25px;">
+            </div>
+            <p>
+              AMS Components Industries has been an invaluable partner in our footwear production journey. Their
+              precision-engineered plastic shoe lasts have consistently met our exacting standards, ensuring a perfect
+              fit and durability in every pair we produce.
+            </p>
+            <div class="quote-icon">”</div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div>
+          <div class="testimonial-card">
+            <div class="top">
+              <div class="profile">
+                <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Rahul Sharma">
+                <div class="profile-info">
+                  <h5>Rahul Sharma</h5>
+                  <span>Managing Director</span>
+                </div>
+              </div>
+              <img src="images/puma-logo.png" alt="Puma" style="height: 25px;">
+            </div>
+            <p>
+              AMS Components Industries has been an invaluable partner in our footwear production journey. Their
+              precision-engineered plastic shoe lasts have consistently met our exacting standards, ensuring a perfect
+              fit and durability in every pair we produce.
+            </p>
+            <div class="quote-icon">”</div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div>
+          <div class="testimonial-card">
+            <div class="top">
+              <div class="profile">
+                <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Rahul Sharma">
+                <div class="profile-info">
+                  <h5>Rahul Sharma</h5>
+                  <span>Managing Director</span>
+                </div>
+              </div>
+              <img src="images/campus-logo.png" alt="Puma" style="height: 25px;">
+            </div>
+            <p>
+              AMS Components Industries has been an invaluable partner in our footwear production journey. Their
+              precision-engineered plastic shoe lasts have consistently met our exacting standards, ensuring a perfect
+              fit and durability in every pair we produce.
+            </p>
+            <div class="quote-icon">”</div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div>
+          <div class="testimonial-card">
+            <div class="top">
+              <div class="profile">
+                <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Rahul Sharma">
+                <div class="profile-info">
+                  <h5>Rahul Sharma</h5>
+                  <span>Managing Director</span>
+                </div>
+              </div>
+              <img src="images/hushpuppies-logo.png" alt="Puma" style="height: 25px;">
+            </div>
+            <p>
+              AMS Components Industries has been an invaluable partner in our footwear production journey. Their
+              precision-engineered plastic shoe lasts have consistently met our exacting standards, ensuring a perfect
+              fit and durability in every pair we produce.
+            </p>
+            <div class="quote-icon">”</div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div>
+          <div class="testimonial-card">
+            <div class="top">
+              <div class="profile">
+                <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Rahul Sharma">
+                <div class="profile-info">
+                  <h5>Rahul Sharma</h5>
+                  <span>Managing Director</span>
+                </div>
+              </div>
+              <img src="images/Niike-logo.png" alt="Puma" style="height: 25px;">
+            </div>
+            <p>
+              AMS Components Industries has been an invaluable partner in our footwear production journey. Their
+              precision-engineered plastic shoe lasts have consistently met our exacting standards, ensuring a perfect
+              fit and durability in every pair we produce.
+            </p>
+            <div class="quote-icon">”</div>
+          </div>
         </div>
       </div>
 
-      <!-- Slide 2 -->
-      <div>
-        <div class="testimonial-card">
-          <div class="top">
-            <div class="profile">
-              <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Gaurav Devgon">
-              <div class="profile-info">
-                <h5>Gaurav Devgon</h5>
-                <span>Managing Director</span>
-              </div>
-            </div>
-            <img src="images/campus-logo.png" alt="Campus" style="height: 25px;">
-          </div>
-          <p>
-            AMS Components Industries has been an invaluable partner in our footwear production journey. Their precision-engineered plastic shoe lasts have consistently met our exacting standards, ensuring a perfect fit and durability in every pair we produce.
-          </p>
-          <div class="quote-icon">”</div>
-        </div>
-      </div>
-
-      <!-- Slide 3 -->
-      <div>
-        <div class="testimonial-card">
-          <div class="top">
-            <div class="profile">
-              <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Rahul Sharma">
-              <div class="profile-info">
-                <h5>Rahul Sharma</h5>
-                <span>Managing Director</span>
-              </div>
-            </div>
-            <img src="images/puma-logo.png" alt="Puma" style="height: 25px;">
-          </div>
-          <p>
-            AMS Components Industries has been an invaluable partner in our footwear production journey. Their precision-engineered plastic shoe lasts have consistently met our exacting standards, ensuring a perfect fit and durability in every pair we produce.
-          </p>
-          <div class="quote-icon">”</div>
-        </div>
-      </div>
-      
-<!-- Slide 3 -->
-      <div>
-        <div class="testimonial-card">
-          <div class="top">
-            <div class="profile">
-              <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Rahul Sharma">
-              <div class="profile-info">
-                <h5>Rahul Sharma</h5>
-                <span>Managing Director</span>
-              </div>
-            </div>
-            <img src="images/puma-logo.png" alt="Puma" style="height: 25px;">
-          </div>
-          <p>
-            AMS Components Industries has been an invaluable partner in our footwear production journey. Their precision-engineered plastic shoe lasts have consistently met our exacting standards, ensuring a perfect fit and durability in every pair we produce.
-          </p>
-          <div class="quote-icon">”</div>
-        </div>
-      </div>
-
-      <!-- Slide 3 -->
-      <div>
-        <div class="testimonial-card">
-          <div class="top">
-            <div class="profile">
-              <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Rahul Sharma">
-              <div class="profile-info">
-                <h5>Rahul Sharma</h5>
-                <span>Managing Director</span>
-              </div>
-            </div>
-            <img src="images/campus-logo.png" alt="Puma" style="height: 25px;">
-          </div>
-          <p>
-            AMS Components Industries has been an invaluable partner in our footwear production journey. Their precision-engineered plastic shoe lasts have consistently met our exacting standards, ensuring a perfect fit and durability in every pair we produce.
-          </p>
-          <div class="quote-icon">”</div>
-        </div>
-      </div>
-
-      <!-- Slide 3 -->
-      <div>
-        <div class="testimonial-card">
-          <div class="top">
-            <div class="profile">
-              <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Rahul Sharma">
-              <div class="profile-info">
-                <h5>Rahul Sharma</h5>
-                <span>Managing Director</span>
-              </div>
-            </div>
-            <img src="images/hushpuppies-logo.png" alt="Puma" style="height: 25px;">
-          </div>
-          <p>
-            AMS Components Industries has been an invaluable partner in our footwear production journey. Their precision-engineered plastic shoe lasts have consistently met our exacting standards, ensuring a perfect fit and durability in every pair we produce.
-          </p>
-          <div class="quote-icon">”</div>
-        </div>
-      </div>
-
-      <!-- Slide 3 -->
-      <div>
-        <div class="testimonial-card">
-          <div class="top">
-            <div class="profile">
-              <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Rahul Sharma">
-              <div class="profile-info">
-                <h5>Rahul Sharma</h5>
-                <span>Managing Director</span>
-              </div>
-            </div>
-            <img src="images/Niike-logo.png" alt="Puma" style="height: 25px;">
-          </div>
-          <p>
-            AMS Components Industries has been an invaluable partner in our footwear production journey. Their precision-engineered plastic shoe lasts have consistently met our exacting standards, ensuring a perfect fit and durability in every pair we produce.
-          </p>
-          <div class="quote-icon">”</div>
-        </div>
-      </div>
     </div>
-    
-  </div>
-</section>
+  </section>
 
   <!-- partners section  -->
 
-  <section class="brand-slider">
+  <section class="brand-slider" id="brand-slider">
     <div class="slider">
       <div><img src="images/puma-logo.png" alt="Puma"></div>
       <div><img src="images/hushpuppies-logo.png" alt="Hush Puppies"></div>
@@ -435,104 +485,104 @@
 
   <!-- ==================gallery section code here==================== -->
 
- <section class="gallery-section py-5">
-  <div class="container">
-    <h6 class="text-center">Gallery</h6>
-    <h2 class="text-center fw-bold mb-4">See Our Work in <span>Action</span></h2>
-    <div class="text-center mb-4">
-      <div class="tabs d-inline-flex">
-        <button class="tab-btn active" data-filter="factory">Factory</button>
-        <button class="tab-btn" data-filter="products">Products</button>
-        <button class="tab-btn" data-filter="team">Team</button>
+  <section class="gallery-section py-5" id="gallery-section">
+    <div class="container">
+      <h6 class="text-center">Gallery</h6>
+      <h2 class="text-center fw-bold mb-4">See Our Work in <span>Action</span></h2>
+      <div class="text-center mb-4">
+        <div class="tabs d-inline-flex">
+          <button class="tab-btn active" data-filter="factory">Factory</button>
+          <button class="tab-btn" data-filter="products">Products</button>
+          <button class="tab-btn" data-filter="team">Team</button>
+        </div>
       </div>
+
+      <div class="row g-3 gallery">
+        <!-- Row 1 -->
+        <div class="col-12 col-md-4 gallery-item" data-category="factory">
+          <a href="images/gallery-1.png" class="image-popup">
+            <img src="images/gallery-1.png" class="img-fluid rounded" />
+          </a>
+        </div>
+        <div class="col-12 col-md-4 gallery-item" data-category="factory">
+          <a href="images/gallery-2.png" class="image-popup">
+            <img src="images/gallery-2.png" class="img-fluid rounded" />
+          </a>
+        </div>
+        <div class="col-12 col-md-4 gallery-item" data-category="factory">
+          <a href="images/gallery-3.png" class="image-popup">
+            <img src="images/gallery-3.png" class="img-fluid rounded" />
+          </a>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="col-12 col-md-8 gallery-item" data-category="factory">
+          <a href="images/gallery-4.png" class="image-popup">
+            <img src="images/gallery-4.png" class="img-fluid rounded" />
+          </a>
+        </div>
+        <div class="col-12 col-md-4 gallery-item" data-category="factory">
+          <a href="images/gallery-5.png" class="image-popup">
+            <img src="images/gallery-5.png" class="img-fluid rounded" />
+          </a>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="col-12 col-md-4 gallery-item" data-category="factory">
+          <a href="images/gallery-6.png" class="image-popup">
+            <img src="images/gallery-6.png" class="img-fluid rounded" />
+          </a>
+        </div>
+        <div class="col-12 col-md-4 gallery-item" data-category="factory">
+          <a href="images/gallery-7.png" class="image-popup">
+            <img src="images/gallery-7.png" class="img-fluid rounded" />
+          </a>
+        </div>
+        <div class="col-12 col-md-4 gallery-item" data-category="factory">
+          <a href="images/gallery-3.png" class="image-popup">
+            <img src="images/gallery-3.png" class="img-fluid rounded" />
+          </a>
+        </div>
+
+
+        <!-- PRODUCTS IMAGES -->
+        <div class="col-12 col-md-4 gallery-item d-none" data-category="products">
+          <a href="images/product-1.jpg" class="image-popup">
+            <img src="images/product-1.jpg" class="img-fluid rounded" />
+          </a>
+        </div>
+        <div class="col-12 col-md-4 gallery-item d-none" data-category="products">
+          <a href="images/product-2.jpg" class="image-popup">
+            <img src="images/product-2.jpg" class="img-fluid rounded" />
+          </a>
+        </div>
+        <div class="col-12 col-md-4 gallery-item d-none" data-category="products">
+          <a href="images/product-3.jpg" class="image-popup">
+            <img src="images/product-3.jpg" class="img-fluid rounded" />
+          </a>
+        </div>
+
+        <!-- TEAM IMAGES -->
+        <div class="col-12 col-md-4 gallery-item d-none" data-category="team">
+          <a href="images/team-1.jpg" class="image-popup">
+            <img src="images/team-1.jpg" class="img-fluid rounded" />
+          </a>
+        </div>
+        <div class="col-12 col-md-4 gallery-item d-none" data-category="team">
+          <a href="images/team-2.jpg" class="image-popup">
+            <img src="images/team-2.jpg" class="img-fluid rounded" />
+          </a>
+        </div>
+        <div class="col-12 col-md-4 gallery-item d-none" data-category="team">
+          <a href="images/team-3.jpg" class="image-popup">
+            <img src="images/team-3.jpg" class="img-fluid rounded" />
+          </a>
+        </div>
+
+      </div>
+
     </div>
-
-    <div class="row g-3 gallery">
-      <!-- Row 1 -->
-      <div class="col-12 col-md-4 gallery-item" data-category="factory">
-        <a href="images/gallery-1.png" class="image-popup">
-          <img src="images/gallery-1.png" class="img-fluid rounded" />
-        </a>
-      </div>
-      <div class="col-12 col-md-4 gallery-item" data-category="factory">
-        <a href="images/gallery-2.png" class="image-popup">
-          <img src="images/gallery-2.png" class="img-fluid rounded" />
-        </a>
-      </div>
-      <div class="col-12 col-md-4 gallery-item" data-category="factory">
-        <a href="images/gallery-3.png" class="image-popup">
-          <img src="images/gallery-3.png" class="img-fluid rounded" />
-        </a>
-      </div>
-
-      <!-- Row 2 -->
-      <div class="col-12 col-md-8 gallery-item" data-category="factory">
-        <a href="images/gallery-4.png" class="image-popup">
-          <img src="images/gallery-4.png" class="img-fluid rounded" />
-        </a>
-      </div>
-      <div class="col-12 col-md-4 gallery-item" data-category="factory">
-        <a href="images/gallery-5.png" class="image-popup">
-          <img src="images/gallery-5.png" class="img-fluid rounded" />
-        </a>
-      </div>
-
-      <!-- Row 3 -->
-      <div class="col-12 col-md-4 gallery-item" data-category="factory">
-        <a href="images/gallery-6.png" class="image-popup">
-          <img src="images/gallery-6.png" class="img-fluid rounded" />
-        </a>
-      </div>
-      <div class="col-12 col-md-4 gallery-item" data-category="factory">
-        <a href="images/gallery-7.png" class="image-popup">
-          <img src="images/gallery-7.png" class="img-fluid rounded" />
-        </a>
-      </div>
-       <div class="col-12 col-md-4 gallery-item" data-category="factory">
-        <a href="images/gallery-3.png" class="image-popup">
-          <img src="images/gallery-3.png" class="img-fluid rounded" />
-        </a>
-      </div>
-
-
-       <!-- PRODUCTS IMAGES -->
-      <div class="col-12 col-md-4 gallery-item d-none" data-category="products">
-        <a href="images/product-1.jpg" class="image-popup">
-          <img src="images/product-1.jpg" class="img-fluid rounded" />
-        </a>
-      </div>
-      <div class="col-12 col-md-4 gallery-item d-none" data-category="products">
-        <a href="images/product-2.jpg" class="image-popup">
-          <img src="images/product-2.jpg" class="img-fluid rounded" />
-        </a>
-      </div>
-      <div class="col-12 col-md-4 gallery-item d-none" data-category="products">
-        <a href="images/product-3.jpg" class="image-popup">
-          <img src="images/product-3.jpg" class="img-fluid rounded" />
-        </a>
-      </div>
-
-      <!-- TEAM IMAGES -->
-      <div class="col-12 col-md-4 gallery-item d-none" data-category="team">
-        <a href="images/team-1.jpg" class="image-popup">
-          <img src="images/team-1.jpg" class="img-fluid rounded" />
-        </a>
-      </div>
-      <div class="col-12 col-md-4 gallery-item d-none" data-category="team">
-        <a href="images/team-2.jpg" class="image-popup">
-          <img src="images/team-2.jpg" class="img-fluid rounded" />
-        </a>
-      </div>
-      <div class="col-12 col-md-4 gallery-item d-none" data-category="team">
-        <a href="images/team-3.jpg" class="image-popup">
-          <img src="images/team-3.jpg" class="img-fluid rounded" />
-        </a>
-      </div>
-
-    </div>
-    
-  </div>
-</section>
+  </section>
 
 
   <!-- ===================================Footer starts here========================== -->
@@ -562,9 +612,9 @@
         <div class="col-lg-2 col-6">
           <div class="footer-section">
             <h6>See More</h6>
-            <a href="#">Gallery</a>
-            <a href="#">About Us</a>
-            <a href="#">Why Choose Us</a>
+            <a href="#gallery-section">Gallery</a>
+            <a href="#about-container">About Us</a>
+            <a href="#counter-section">Why Choose Us</a>
           </div>
         </div>
 
@@ -572,9 +622,9 @@
         <div class="col-lg-2 col-6">
           <div class="footer-section">
             <h6>Company</h6>
-            <a href="#">Home</a>
-            <a href="#">Process</a>
-            <a href="#">Product <span class="badge-new">New</span></a>
+            <a href="#hero-wrapper">Home</a>
+            <a href="#video-section">Process</a>
+            <a href="#shoe-last-section">Product <span class="badge-new">New</span></a>
           </div>
         </div>
 
@@ -582,9 +632,9 @@
         <div class="col-lg-2 col-6">
           <div class="footer-section">
             <h6>Resources</h6>
-            <a href="#">Clients</a>
+            <a href="#brand-slider">Clients</a>
             <a href="contact.html">Contact</a>
-            <a href="#">Industries</a>
+            <a href="#industry-section">Industries</a>
           </div>
         </div>
 
@@ -615,8 +665,8 @@
   </footer>
 
 
-  
-   <!-- jQuery -->
+
+  <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 
   <!-- Slick JS -->
@@ -627,11 +677,11 @@
   <script src="Script.js"></script>
   <!-- Magnific Popup JS -->
   <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
