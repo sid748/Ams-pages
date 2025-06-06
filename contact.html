@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <link rel="stylesheet" href="Style.css">
   <title>AMS Last</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -23,31 +24,111 @@
 </head>
 
 <body>
+<style>
+.new-header{
+background: none !important; 
+}
 
-<div class="container-fluid hero-wrapper">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <div class="container-fluid d-flex">
-        <a class="navbar-brand" href="index.html">
-          <img src="images/AMS_logo.png" alt="AMS Logo" height="70" />
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-evenly" id="navbarNav">
-          <ul class="navbar-nav align-items-center">
-            <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">ABOUT</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">PRODUCTS</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">PROCESS</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">SPECIALITY</a></li>
-          </ul>
-        </div>
-        <div class="justify-content-between d-flex align-items-center">
-          <a class="btn btn-contact ms-3" href="contact.html"><span>Contact Us</span><i class="fa-solid fa-arrow-right ms-2"></i></a>
-        </div>
-      </div>
-    </nav>
+.navbar li a{
+color: black !important;
+}
+
+.custom-offcanvas ul li a{
+color: black !important;
+}
+
+@media (max-width: 991px) {
+    .custom-offcanvas .nav-link {
+        color: #fff !important;
+        font-size: 20px;
+        padding: 12px 0;
+        font-weight: 500;
+    }
+
+    .navbar-toggler {
+    padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
+    font-size: var(--bs-navbar-toggler-font-size);
+    line-height: 1;
+    color: rgb(0 0 0);
+    background-color: #c5c2c2;
+    border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
+    border-radius: var(--bs-navbar-toggler-border-radius);
+    transition: var(--bs-navbar-toggler-transition);
+}
+
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-image: var(--bs-navbar-toggler-icon-bg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    color: black !important;
+}
+}
+</style>
+<div class="container-fluid hero-wrapper new-header" id="hero-wrapper">
+  <nav class="navbar navbar-expand-lg navbar-dark  ">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand" href="#">
+      <img src="images/AMS_logo-1.png" alt="AMS Logo" height="60" />
+    </a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler d-lg-none" type="button" id="burgerToggle">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Desktop Menu -->
+    <div class="collapse navbar-collapse justify-content-between d-none d-lg-flex" id="navbarNav">
+  <div class="mx-auto d-flex align-items-center">
+    <ul class="navbar-nav gap-3">
+      <li class="nav-item"><a class="nav-link" href="#hero-wrapper">HOME</a></li>
+      <li class="nav-item"><a class="nav-link" href="#about-container">ABOUT</a></li>
+      <li class="nav-item"><a class="nav-link" href="#shoe-last-section">PRODUCTS</a></li>
+      <li class="nav-item"><a class="nav-link" href="#video-section">PROCESS</a></li>
+      <li class="nav-item"><a class="nav-link" href="#gallery-section">GALLERY</a></li>
+    </ul>
+  </div>
+  <div class="d-flex align-items-center">
+    <button class="contact-btn me-3 ">
+        <a href="contact.html" class="text-decoration-none"><span class="hover-arrow-left"><i
+              class="fa-solid fa-arrow-right me-2"></i></span>
+          <span class="btn-text">Contact Us</span>
+          <span class="hover-arrow-right"><i class="fa-solid fa-arrow-right ms-2"></i></span></a>
+      </button>
+    </a>
+  </div>
+</div>
+
+
+    <!-- Custom Mobile Menu -->
+   <div class="custom-offcanvas" id="mobileMenu">
+  <button type="button" class="close-btn" id="closeMenu">&times;</button>
+  <ul class="navbar-nav text-center">
+    <li class="nav-item"><a class="nav-link" href="#hero-wrapper">HOME</a></li>
+    <li class="nav-item"><a class="nav-link" href="#about-container">ABOUT</a></li>
+    <li class="nav-item"><a class="nav-link" href="#shoe-last-section">PRODUCTS</a></li>
+    <li class="nav-item"><a class="nav-link" href="#video-section">PROCESS</a></li>
+    <li class="nav-item"><a class="nav-link" href="#gallery-section">GALLERY</a></li>
+
+    <!-- Contact Button Right Below Gallery -->
+    <li class="nav-item mt-2">
+      <button class="contact-btn mt-2 me-3 ">
+        <a href="contact.html" class="text-decoration-none"><span class="hover-arrow-left"><i
+              class="fa-solid fa-arrow-right me-2"></i></span>
+          <span class="btn-text">Contact Us</span>
+          <span class="hover-arrow-right"><i class="fa-solid fa-arrow-right ms-2"></i></span></a>
+      </button>
+    </li>
+  </ul>
+</div>
+
+  </div>
+</nav>
 </div>
 
 <!-- ================form code here=============== -->
@@ -102,7 +183,13 @@
             <div class="mb-4">
               <textarea name="message" rows="4" class="form-control" placeholder="Write Us"></textarea>
             </div>
-            <button type="submit" class="submit-btn">Submit <i class="fa-solid fa-arrow-right"></i></button>
+            <!-- <button type="submit" class="submit-btn">Submit <i class="fa-solid fa-arrow-right"></i></button> -->
+             <button type="submit" class="contact-btn submit-style mt-2 me-3">
+  <span class="hover-arrow-left"><i class="fa-solid fa-arrow-right me-2"></i></span>
+  <span class="btn-text">Submit</span>
+  <span class="hover-arrow-right"><i class="fa-solid fa-arrow-right ms-2"></i></span>
+</button>
+            
           </form>
         </div>
       </div>
@@ -123,8 +210,12 @@
               </div>
               <h6>Unit 1 – Agra</h6>
               <p>Plot No. 593, Hirala ki piyau,<br>Behind RN Bajaj, Agra Mathura road,<br>Artoni, Agra-282007</p>
-              <p><strong>agra@amslast.com</strong></p>
-              <a href="#" class="btn-location">Get Location <i class="fa-solid fa-arrow-right"></i></a>
+              <p class="pb-2"><strong>agra@amslast.com</strong></p>
+              <a href="#" class="contact-btn location-style">
+  <span class="hover-arrow-left"><i class="fa-solid fa-arrow-right me-2"></i></span>
+  <span class="btn-text">Get Location</span>
+  <span class="hover-arrow-right"><i class="fa-solid fa-arrow-right ms-2"></i></span>
+</a>
             </div>
           </div>
           <div class="col-md-6">
@@ -143,8 +234,12 @@
               </div>
               <h6>Unit 1 – Agra</h6>
               <p>Plot No. 593, Hirala ki piyau,<br>Behind RN Bajaj, Agra Mathura road,<br>Artoni, Agra-282007</p>
-              <p><strong>agra@amslast.com</strong></p>
-              <a href="#" class="btn-location">Get Location <i class="fa-solid fa-arrow-right"></i></a>
+              <p class="pb-2"><strong>agra@amslast.com</strong></p>
+             <a href="#" class=" contact-btn location-style">
+  <span class="hover-arrow-left"><i class="fa-solid fa-arrow-right me-2"></i></span>
+  <span class="btn-text">Get Location</span>
+  <span class="hover-arrow-right"><i class="fa-solid fa-arrow-right ms-2"></i></span>
+</a>
             </div>
           </div>
           <div class="col-md-6">
@@ -157,83 +252,81 @@
 
      <!-- ===================================Footer starts here========================== -->
   <!-- FOOTER HTML -->
-  <footer class="footer pt-5 pb-2">
-    <div class="container pt-5">
-      <div class="row gy-4 align-items-start">
+ <footer class="footer pt-5 pb-2">
+  <div class="container pt-5">
+    <div class="row gy-4 align-items-start">
 
-        <!-- Contact Section -->
-        <div class="col-lg-3 col-md-6">
-          <div class="footer-logo text-start">
-            <img src="images/AMS_logo.png" alt="AMS Logo">
-          </div>
-          <h6 class="text-start">Contact</h6>
-          <div class="contact-item">
-            <div class="circle"><i class="fas fa-phone"></i></div>
-            <a href="tel:+919372637273" class="mb-0">+91 93726 37273</a>
-          </div>
-          <div class="contact-item">
-            <div class="circle"><i class="fas fa-envelope"></i></div>
-            <a href="mailto:info@amslasts.com" class="mb-0">info@amslasts.com</a>
-          </div>
+      <!-- Contact Section -->
+      <div class=" col-xl-3 col-lg-4 col-md-6 col-sm-12">
+        <div class="footer-logo text-start">
+          <img src="images/AMS_logo.png" alt="AMS Logo" class="img-fluid">
         </div>
-
-
-        <!-- See More Section -->
-        <div class="col-lg-2 col-6">
-          <div class="footer-section">
-            <h6>See More</h6>
-            <a href="#">Gallery</a>
-            <a href="#">About Us</a>
-            <a href="#">Why Choose Us</a>
-          </div>
+        <h6 class="text-start">Contact</h6>
+        <div class="contact-item">
+          <div class="circle"><i class="fas fa-phone"></i></div>
+          <a href="tel:+919372637273" class="mb-0">+91 93726 37273</a>
         </div>
-
-        <!-- Company Section -->
-        <div class="col-lg-2 col-6">
-          <div class="footer-section">
-            <h6>Company</h6>
-            <a href="#">Home</a>
-            <a href="#">Process</a>
-            <a href="#">Product <span class="badge-new">New</span></a>
-          </div>
+        <div class="contact-item">
+          <div class="circle"><i class="fas fa-envelope"></i></div>
+          <a href="mailto:info@amslasts.com" class="mb-0">info@amslasts.com</a>
         </div>
-
-        <!-- Resources Section -->
-        <div class="col-lg-2 col-6">
-          <div class="footer-section">
-            <h6>Resources</h6>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
-            <a href="#">Industries</a>
-          </div>
-        </div>
-
-        <!-- Social Media Section -->
-        <div class="col-lg-3 col-12">
-          <div class="social-icon">
-            <div class="circle"><i class="fab fa-facebook-f"></i></div>
-            Follow us on Facebook
-          </div>
-          <div class="social-icon">
-            <div class="circle"><i class="fab fa-instagram"></i></div>
-            Follow us on Instagram
-          </div>
-          <div class="social-icon">
-            <div class="circle"><i class="fab fa-linkedin-in"></i></div>
-            Follow us on LinkedIn
-          </div>
-        </div>
-
       </div>
 
-      <!-- Bottom Strip -->
-      <div class="footer-bottom mt-4">
-        <p class="mb-4">&copy; 2025. All rights reserved.</p>
-        <p class="m-0">Made with <i class="fas fa-heart text-danger mx-2"></i> by MediaX</p>
+      <!-- See More Section -->
+      <div class=" col-xl-2 col-lg-4 col-md-6 col-sm-6 col-6">
+        <div class="footer-section">
+          <h6>See More</h6>
+          <a href="#gallery-section">Gallery</a>
+          <a href="#about-container">About Us</a>
+          <a href="#counter-section">Why Choose Us</a>
+        </div>
       </div>
+
+      <!-- Company Section -->
+      <div class=" col-xl-2 col-lg-4 col-md-3 col-sm-6 col-6">
+        <div class="footer-section">
+          <h6>Company</h6>
+          <a href="#hero-wrapper">Home</a>
+          <a href="#video-section">Process</a>
+          <a href="#shoe-last-section">Product <span class="badge-new">New</span></a>
+        </div>
+      </div>
+
+      <!-- Resources Section -->
+      <div class=" col-xl-2 col-lg-4 col-md-3 col-sm-6 col-4">
+        <div class="footer-section">
+          <h6>Resources</h6>
+          <a href="#brand-slider">Clients</a>
+          <a href="contact.html">Contact</a>
+          <a href="#industry-section">Industries</a>
+        </div>
+      </div>
+
+      <!-- Social Media Section -->
+      <div class=" col-xl-3 col-lg-6 col-md-6 col-sm-6 col-8">
+        <div class="social-icon">
+          <div class="circle"><i class="fab fa-facebook-f"></i></div>
+          Follow us on Facebook
+        </div>
+        <div class="social-icon">
+          <div class="circle"><i class="fab fa-instagram"></i></div>
+          Follow us on Instagram
+        </div>
+        <div class="social-icon">
+          <div class="circle"><i class="fab fa-linkedin-in"></i></div>
+          Follow us on LinkedIn
+        </div>
+      </div>
+
     </div>
-  </footer>
 
+    <!-- Bottom Strip -->
+    <div class="footer-bottom mt-4">
+      <p class="mb-4">&copy; 2025. All rights reserved.</p>
+      <p class="m-0">Made with <i class="fas fa-heart text-danger mx-2"></i> by MediaX</p>
+    </div>
+  </div>
+</footer>
 
   
    <!-- jQuery -->

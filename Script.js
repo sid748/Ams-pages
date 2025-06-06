@@ -1,3 +1,22 @@
+// navigation bar functionality
+  
+  const burger = document.getElementById("burgerToggle");
+  const menu = document.getElementById("mobileMenu");
+  const closeBtn = document.getElementById("closeMenu");
+
+  burger.addEventListener("click", () => {
+    menu.classList.add("show");
+    document.body.style.overflow = 'hidden';
+  });
+
+  closeBtn.addEventListener("click", () => {
+    menu.classList.remove("show");
+    document.body.style.overflow = 'auto';
+  });
+
+
+
+
 //  types of last section here
  const listItems = document.querySelectorAll('.custom-list-item');
 const shoeImage = document.querySelector('.shoe-image');
@@ -46,7 +65,7 @@ function nextSlide() {
 
 function startAutoPlay() {
   updateDisplay(currentIndex);
-  autoTimer = setInterval(nextSlide, 5000);
+  autoTimer = setInterval(nextSlide, 6000);
 }
 
 function stopAutoPlay() {
@@ -57,7 +76,7 @@ listItems.forEach((item, index) => {
   item.addEventListener('click', () => {
     stopAutoPlay();
     updateDisplay(index);
-    setTimeout(startAutoPlay, 6000);
+    setTimeout(startAutoPlay, 8000);
   });
 });
 
@@ -102,67 +121,68 @@ tabs.forEach(tab => {
   });
 });
 
-
-    // partner slider code here
-      $(document).ready(function(){
-      $('.slider').slick({
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        infinite: true,
-        arrows: false,
-        dots: false,
-        responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 3
-            }
-          },
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 2
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 2
-            }
-          }
-        ]
-      });
-    });
-
-
-    // testimonial slider code here 
-     $(document).ready(function(){
-    $('.testimonial-slider').slick({
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      infinite: true,
-      autoplay: true,
-      autoplaySpeed: 3000,
-      arrows: false,
-      dots: false,
-      responsive: [
-        {
-          breakpoint: 992,
-          settings: {
-            slidesToShow: 2
-          }
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 1
-          }
+// partner slider functionality
+ $(document).ready(function(){
+  $('.partner-slider').slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 3000,
+    cssEase: 'linear',
+    infinite: true,
+    arrows: false,
+    dots: false,
+    pauseOnHover: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3
         }
-      ]
-    });
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2
+        }
+      }
+    ]
   });
+});
+
+// testimonial slider functionality
+  $(document).ready(function(){
+  $('.testimonial-slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
+    dots: false,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+});
+
 
   // counter starts here
  const counters = document.querySelectorAll('.stat-number');
