@@ -27,7 +27,7 @@
   justify-content: center;
   gap: 10px;
   padding: 12px 50px;
-  background-color: #4e2b1c !important;
+  background-color: #53311E !important;
   color: #fff !important;
   border: none;
   border-radius: 8px;
@@ -66,8 +66,8 @@
 
 /* On hover */
  .navbar.contact-btn:hover {
-  background-color: #000 !important;
-  color: #ffffff !important;
+  background-color: #ffffff !important;
+  color: #000000 !important;
 }
 
 .navbar.contact-btn:hover .hover-arrow-left {
@@ -211,7 +211,7 @@
   text-align: left;
 }
 
-.contact-btn {
+.hero-new .contact-btn {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -226,8 +226,8 @@
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-.contact-btn .btn-text,
-.contact-btn i {
+.hero-new .contact-btn .btn-text,
+.hero-new .contact-btn i {
   color: #ffffff !important;
 }
 
@@ -251,31 +251,31 @@
   transform: translateX(0);
 }
 
-.contact-btn:hover {
+.hero-new .contact-btn:hover {
   background-color: #000 !important;
   color: #ffffff !important;
 }
 
-.contact-btn:hover .hover-arrow-left {
+.hero-new .contact-btn:hover .hover-arrow-left {
   opacity: 1;
   visibility: visible;
   transform: translateX(0);
 }
 
-.contact-btn:hover .hover-arrow-right {
+.hero-new .contact-btn:hover .hover-arrow-right {
   opacity: 0;
   visibility: hidden;
   transform: translateX(10px);
 }
 
-.contact-btn:hover .btn-text {
+.hero-new .contact-btn:hover .btn-text {
   transform: translateX(5px);
   transition: transform 0.4s ease;
 }
 
 .hero-image {
   position: absolute;
-  right: 0;
+  right: 300px;
   top: 70px;
   z-index: 0;
 }
@@ -324,7 +324,7 @@
     font-size: 1.05rem;
   }
 
-  .contact-btn {
+  .hero-new .contact-btn {
     padding: 14px 50px;
     font-size: 16px;
   }
@@ -392,7 +392,7 @@
     font-size: 0.95rem;
   }
 
-  .contact-btn {
+  .hero-new .contact-btn {
     font-size: 14px;
     padding: 10px 24px;
   }
@@ -421,11 +421,11 @@
 
     /* about section starts here */
  .about-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
-  padding: 100px 20px; /* use horizontal padding instead of !important */
-  display: flex;
-  align-items: flex-start;
+  padding: 100px 20px !important;
+  display: flex !important;
+  align-items: flex-start !important;
   gap: 40px;
   flex-wrap: wrap;
 }
@@ -440,18 +440,21 @@
   margin-bottom: 12px;
   font-size: 14px;
   color: #6a3b14;
+  text-align: left;
 }
 
 .about-left h2 {
   font-size: 34px;
   margin-bottom: 16px;
   line-height: 1.4;
+  text-align: left;
 }
 
 .sub-para {
   font-size: 16px;
   color: #777;
   margin-bottom: 24px;
+  text-align: left;
 }
 
 .highlight {
@@ -459,7 +462,7 @@
   font-weight: 700;
 }
 
-.tabs {
+ .about-left .tabs {
   display: flex !important;
   flex-wrap: wrap;
   margin-bottom: 24px;
@@ -500,6 +503,7 @@
   font-size: 16px;
   color: #555;
   transition: opacity 0.4s ease;
+  text-align: left;
 }
 
 .about-right {
@@ -510,11 +514,11 @@
 
 .bg-box {
   position: absolute;
-  right: -20px;
+  right: -10px;
   bottom: 0;
   width: 50%;
   height: 100%;
-  background-color: #f1e7df;
+  background-color: #A57865;
   border-radius: 12px;
   z-index: 0;
 }
@@ -619,27 +623,33 @@
 
 .section-subtitle {
   text-transform: uppercase;
-  font-size: 14px;
-  color: #a6785e;
+  font-size: 16px;
+  color: #9F6D51;
   letter-spacing: 1px;
+  font-weight: 500;
   margin-bottom: 10px;
+  text-align: left;
 }
 
-.section-title {
-  font-size: 32px;
-  font-weight: 700;
+.section-subtitle .section-title {
+  font-size: 40px;
+  font-weight:600;
   margin: 10px 0;
   color: #1d1d1f;
+  text-align: left !important;
+   margin-bottom: 20px !important;
 }
 
-.section-title .highlight {
-  color: #a6785e;
+.section-subtitle .section-title .highlight {
+  color: #A57865;
+   text-align: left !important;
 }
 
 .section-description {
-  color: #555;
+  color: #757575;
   font-size: 16px;
   margin-bottom: 40px;
+  text-align: left;
 }
 
 .stats-grid {
@@ -770,28 +780,29 @@
 
 .shoe-last-section {
   padding: 60px 20px;
+  background-color: #FAFAFA;
 }
 
 .sub-title {
-  font-size: 2rem;
-  color: #a87b6d;
+  font-size: 1rem;
+  color: #9F6D51;
   text-align: center;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 1px;
   margin-bottom: 10px;
 }
 
-.section-title {
+.shoe-last-section .section-title {
   text-align: center;
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 2.5rem;
+  font-weight: 600;
   color: #1d1d1d;
-  margin-bottom: 40px;
+  margin-bottom: 40px !important;
 }
 
 .highlight {
-  color: #a05a3c;
+  color: #A57865;
 }
 
 .shoe-last-section .container {
@@ -898,7 +909,8 @@
   position: absolute;
   top: 4%;
   right: 3%;
-  color: white;
+  color: #5d402e;
+  font-weight: 500;;
   font-size: 1rem;
   text-align: right;
   max-width: 90%;
@@ -1270,12 +1282,13 @@
      .industry-section {
       padding: 60px 20px;
       text-align: center;
+      background-color: #FAFAFA;
     }
 
     .industry-section h6 {
-      font-size: 14px;
+      font-size: 16px;
       letter-spacing: 1px;
-      color: #7d5c4a;
+      color: #9F6D51;
       text-transform: uppercase;
       font-weight: 500;
        text-align: left;
@@ -1283,13 +1296,13 @@
 
     .industry-section h2 {
       font-size: 40px;
-      font-weight: 700;
+      font-weight: 600;
       margin-bottom: 40px;
       text-align: left;
     }
 
     .industry-section h2 span {
-      color: #7d5c4a;
+      color: #53311E;
     }
 
     .industry-card {
@@ -1299,7 +1312,7 @@
       position: relative;
       height: 100%;
       transition: 0.3s ease-in-out;
-      border: 1px solid grey;
+      border: 1px solid #E3E3E3;
     }
 
     .industry-card:hover {
@@ -1432,8 +1445,8 @@
 
 /* On hover */
 .contact-btn:hover {
-  background-color: #000;
-  color: #f1c27d;
+  background-color: #000 !important;
+  color: #ffffff !important;
 }
 
 .contact-btn:hover .hover-arrow-left {
@@ -1463,22 +1476,22 @@
     }
 
     .testimonial-section h6 {
-      color: #b18a76;
+      color: #9F6D51;
       font-weight: 500;
       text-transform: uppercase;
-      font-size: 14px;
+      font-size: 16px;
       margin-bottom: 10px;
       text-align: left;
     }
 
     .testimonial-section h2 {
-      font-weight: 700;
-      font-size: 32px;
+      font-weight: 600;
+      font-size: 40px;
       text-align: left;
     }
 
     .testimonial-section h2 span {
-      color: #b18a76;
+      color: #A57865;
     }
 
     .testimonial-card {
@@ -1580,9 +1593,11 @@
 
 .gallery-section h6 {
   color: #9F6D51;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 1px;
   margin-bottom: 10px;
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 .gallery-section h2 {
   font-size: 2.5rem;
@@ -1591,7 +1606,7 @@
 }
 
 .gallery-section h2 span {
-  color: #9F6D51;
+  color: #A57865;
 }
 
 .tabs {
@@ -1676,7 +1691,7 @@
 
   .tab-btn {
     width: 100%;
-    padding: 10px 52px;
+    padding: 10px 100px;
     font-size: 14px;
     text-align: center;
   }
@@ -1998,14 +2013,16 @@
     .contact-form-box h2 {
       font-size: 36px;
       font-weight: 700;
+      text-align: left;
     }
     .contact-form-box p {
       font-size: 15px;
       margin-bottom: 30px;
+      text-align: left;
     }
 
     .form-control {
-      background-color: rgba(255,255,255,0.15);
+      background-color:#ffece1 !important;
       border: none;
       border-radius: 8px;
       color: #fff;
@@ -2021,6 +2038,7 @@
     .submit-style {
   background-color: #ffffff !important;
   color: #000000 !important;
+  text-align: right;
 }
 
 .submit-style .btn-text,
@@ -2106,11 +2124,13 @@
     /* location section here */
 
       .location-card {
-      background-color: #fff;
+      background-color: #FAFAFA;
       border-radius: 14px;
       padding: 25px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
       height: 100%;
+      text-align: left;
+
     }
 
     .location-card .icon-box {
