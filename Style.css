@@ -1216,7 +1216,7 @@ body{
   height: auto;
   display: block;
   object-fit: cover;
-  max-height: 80vh;
+  max-height: 100vh;
 }
 
 /* Fullscreen background layout (optional) */
