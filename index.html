@@ -17,6 +17,13 @@
   <!-- aos link here -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+  <!-- font links here -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
 
 
 
@@ -119,42 +126,37 @@
 
   <!-- About Us section here -->
   <div class="container about-container overflow-hidden" id="about-container">
-  <div class="about-left">
-    <h6 class="text-uppercase" data-aos="fade-up" data-aos-duration="1000">About Us</h6>
-    <h2 data-aos="fade-up" data-aos-duration="1000">
-      Setting the Standard in Precision <span class="highlight">Shoe Last</span> Manufacturing
-    </h2>
-    <p class="sub-para" data-aos="fade-up" data-aos-duration="1000">
-      A trusted name in the footwear industry, delivering precision-crafted shoe lasts to the nation’s top brands.
-    </p>
+    <div class="about-left">
+      <h6 class="text-uppercase" data-aos="fade-up" data-aos-duration="1000">About Us</h6>
+      <h2 data-aos="fade-up" data-aos-duration="1000">
+        Setting the Standard in Precision <span class="highlight">Shoe Last</span> Manufacturing
+      </h2>
+      <p class="sub-para" data-aos="fade-up" data-aos-duration="1000">
+        A trusted name in the footwear industry, delivering precision-crafted shoe lasts to the nation’s top brands.
+      </p>
 
-    <div class="tabs" data-aos="fade-up" data-aos-duration="1000">
-      <div class="tab active" data-index="0">Our History</div>
-      <div class="tab" data-index="1">Our Mission</div>
-      <div class="tab" data-index="2">Our Vision</div>
+      <div class="tabs" data-aos="fade-up" data-aos-duration="1000">
+        <div class="tab active" data-index="0">Our History</div>
+        <div class="tab" data-index="1">Our Mission</div>
+        <div class="tab" data-index="2">Our Vision</div>
+      </div>
+
+      <p class="tab-content" id="tabText" data-aos="fade-up" data-aos-duration="3000">
+        Since 2017, AMS Components Industries has delivered high-quality plastic shoe lasts to leading footwear brands
+        across India. With advanced manufacturing, technical expertise, and a customer-first approach, we help shape the
+        future of reliable footwear solutions.
+      </p>
     </div>
 
-    <p
-      class="tab-content"
-      id="tabText"
-      data-aos="fade-up"
-      data-aos-duration="3000"
-    >
-      Since 2017, AMS Components Industries has delivered high-quality plastic shoe lasts to leading footwear brands
-      across India. With advanced manufacturing, technical expertise, and a customer-first approach, we help shape the
-      future of reliable footwear solutions.
-    </p>
-  </div>
-
-  <div class="about-right" data-aos="fade-left" data-aos-duration="3000">
-    <div class="image-box-wrapper">
-      <div class="bg-box"></div>
-      <div class="image-box">
-        <img id="tabImage" src="images/About-us.png" alt="Tab Image" />
+    <div class="about-right" data-aos="fade-left" data-aos-duration="3000">
+      <div class="image-box-wrapper">
+        <div class="bg-box"></div>
+        <div class="image-box">
+          <img id="tabImage" src="images/About-us.png" alt="Tab Image" />
+        </div>
       </div>
     </div>
   </div>
-</div>
 
   <!-- counter section here -->
   <section class="why-choose-us overflow-hidden" id="counter-section">
@@ -205,41 +207,70 @@
       </h2>
       <section class="row">
         <!-- Left: List -->
-        <div class="col-lg-4 content-new">
+        <div class=" col-lg-4 content-new">
           <ul class="custom-list">
-            <li class="custom-list-item active" data-aos="fade-up" data-aos-duration="1000"
-              data-image="images/Shoe-1.webp"
-              data-text="A single-piece last ideal for durability and classic footwear molding.">
-              <span>01.</span> <strong>Solid Last</strong> <i class="fa-solid fa-arrow-right"></i>
+            <li class="custom-list-item active" data-image="images/Shoe-1.webp"
+              data-text="A single‑piece last ideal for durability and classic footwear molding.">
+              <span class="item-number">01.</span>
+              <div class="item-content">
+                <span class="item-text">Solid Last</span>
+                <i class="fa-solid fa-arrow-right item-arrow"></i>
+              </div>
               <span class="progress-bar-line"></span>
             </li>
-            <li class="custom-list-item" data-aos="fade-up" data-aos-duration="1000" data-image="images/Shoe-2.webp"
+
+            <li class="custom-list-item" data-image="images/Shoe-2.webp"
               data-text="Perfect for fashion footwear with scoop-shaped designs.">
-              <span>02.</span> Scoop Cut Last <i class="fa-solid fa-arrow-right"></i>
+              <span class="item-number">02.</span>
+              <div class="item-content">
+                <span class="item-text">Scoop Cut Last</span>
+                <i class="fa-solid fa-arrow-right item-arrow"></i>
+              </div>
               <span class="progress-bar-line"></span>
             </li>
-            <li class="custom-list-item" data-aos="fade-up" data-aos-duration="1000" data-image="images/shoe-3.webp"
+
+            <li class="custom-list-item" data-image="images/Shoe-3.webp"
               data-text="Durable and versatile hinge design for easy molding.">
-              <span>03.</span> Connectional Hinge Last <i class="fa-solid fa-arrow-right"></i>
+              <span class="item-number">03.</span>
+              <div class="item-content">
+                <span class="item-text">Connectional Hinge Last</span>
+                <i class="fa-solid fa-arrow-right item-arrow"></i>
+              </div>
               <span class="progress-bar-line"></span>
             </li>
-            <li class="custom-list-item" data-aos="fade-up" data-aos-duration="1000" data-image="images/shoe-4.webp"
+
+            <li class="custom-list-item" data-image="images/Shoe-4.webp"
               data-text="Smart sliding design ideal for athletic footwear.">
-              <span>04.</span> Slidomatic Hinge Last <i class="fa-solid fa-arrow-right"></i>
+              <span class="item-number">04.</span>
+              <div class="item-content">
+                <span class="item-text">Slidomatic Hinge Last</span>
+                <i class="fa-solid fa-arrow-right item-arrow"></i>
+              </div>
               <span class="progress-bar-line"></span>
             </li>
-            <li class="custom-list-item" data-aos="fade-up" data-aos-duration="1000" data-image="images/shoe-5.webp"
+
+            <li class="custom-list-item" data-image="images/Shoe-5.webp"
               data-text="Engineered for superior cut and comfort in step designs.">
-              <span>05.</span> Slidomatic Step Cut Hinge Last <i class="fa-solid fa-arrow-right"></i>
+              <span class="item-number">05.</span>
+              <div class="item-content">
+                <span class="item-text">Slidomatic Step Cut Hinge Last</span>
+                <i class="fa-solid fa-arrow-right item-arrow"></i>
+              </div>
               <span class="progress-bar-line"></span>
             </li>
-            <li class="custom-list-item" data-aos="fade-up" data-aos-duration="1000" data-image="images/shoe-6.webp"
-              data-text="Precision-crafted straight V cut for sleek shoes.">
-              <span>06.</span> Slidomatic Straight V Cut Last <i class="fa-solid fa-arrow-right"></i>
+
+            <li class="custom-list-item" data-image="images/Shoe-6.webp"
+              data-text="Precision‑crafted straight V cut for sleek shoes.">
+              <span class="item-number">06.</span>
+              <div class="item-content">
+                <span class="item-text">Slidomatic Straight V Cut Last</span>
+                <i class="fa-solid fa-arrow-right item-arrow"></i>
+              </div>
               <span class="progress-bar-line"></span>
             </li>
           </ul>
         </div>
+
 
         <!-- Right: Image and Background -->
         <div class="col-lg-8 images-new" data-aos="fade-up" data-aos-duration="1000">
@@ -271,22 +302,15 @@
 
   <!-- video section -->
   <section class="video-section overflow-hidden" id="video-section" data-aos="fade-up" data-aos-duration="1000">
-  <div class="container-fluid px-0">
-    <div class="video-wrapper">
-      <video 
-        id="mainVideo" 
-        class="embedded-video" 
-        autoplay 
-        muted 
-        loop 
-        playsinline 
-        preload="auto">
-        <source src="images/AMS-IV.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+    <div class="container-fluid px-0">
+      <div class="video-wrapper">
+        <video id="mainVideo" class="embedded-video" autoplay muted loop playsinline preload="auto">
+          <source src="images/AMS-IV.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
 
@@ -382,8 +406,8 @@
       <h6>Testimonials</h6>
       <h2>What <span>Our Partners</span> Say About Us</h2>
       <div class="testimonial-slider mt-4"> -->
-        <!-- Slide 1 -->
-        <!-- <div>
+  <!-- Slide 1 -->
+  <!-- <div>
           <div class="testimonial-card">
             <div class="top">
               <div class="profile">
@@ -404,8 +428,8 @@
           </div>
         </div> -->
 
-        <!-- Slide 2 -->
-        <!-- <div>
+  <!-- Slide 2 -->
+  <!-- <div>
           <div class="testimonial-card">
             <div class="top">
               <div class="profile">
@@ -426,8 +450,8 @@
           </div>
         </div> -->
 
-        <!-- Slide 3 -->
-        <!-- <div>
+  <!-- Slide 3 -->
+  <!-- <div>
           <div class="testimonial-card">
             <div class="top">
               <div class="profile">
@@ -448,8 +472,8 @@
           </div>
         </div> -->
 
-        <!-- Slide 4 -->
-          <!-- <div>
+  <!-- Slide 4 -->
+  <!-- <div>
           <div class="testimonial-card">
             <div class="top">
               <div class="profile">
@@ -470,8 +494,8 @@
           </div>
         </div> -->
 
-        <!-- Slide 5 -->
-         <!-- <div>
+  <!-- Slide 5 -->
+  <!-- <div>
           <div class="testimonial-card">
             <div class="top">
               <div class="profile">
@@ -492,8 +516,8 @@
           </div>
         </div> -->
 
-        <!-- Slide 6 -->
-         <!-- <div>
+  <!-- Slide 6 -->
+  <!-- <div>
           <div class="testimonial-card">
             <div class="top">
               <div class="profile">
@@ -513,7 +537,7 @@
             <div class="quote-icon">”</div>
           </div>
         </div> -->
-<!-- 
+  <!-- 
       </div>
 
     </div>
@@ -546,7 +570,7 @@
       <div><img src="images/puma-logo.webp" alt="Puma"></div>
       <div><img src="images/liberty-logo.webp" alt="Liberty"></div>
       <div><img src="images/cult-sport.webp" alt="cultsport"></div>
-      
+
 
     </div>
   </section>
@@ -554,39 +578,39 @@
 
   <!-- ==================gallery section code here==================== -->
 
- <section class="gallery-section py-5" id="gallery-section">
-  <div class="container">
-    <h6 class="text-center">Gallery</h6>
-    <h2 class="text-center fw-bold mb-4">
-      See Our Work in <span>Action</span>
-    </h2>
-    <div class="text-center mb-4">
-      <div class="tabs d-inline-flex">
-        <button class="tab-btn active" data-filter="factory">Factory</button>
-        <button class="tab-btn" data-filter="products">Products</button>
-        <button class="tab-btn" data-filter="team">Team</button>
-      </div>
-    </div>
-
-    <div class="row g-3 gallery">
-      <!-- Factory Items -->
-      <div class="col-12 col-md-4 gallery-item" data-category="factory">
-        <a href="images/gallery-1.png" class="image-popup">
-          <img src="images/gallery-1.png" class="img-fluid rounded" />
-        </a>
-      </div>
-      <div class="col-12 col-md-4 gallery-item" data-category="factory">
-        <a href="images/gallery-2.png" class="image-popup">
-          <img src="images/gallery-2.png" class="img-fluid rounded" />
-        </a>
-      </div>
-      <div class="col-12 col-md-4 gallery-item" data-category="factory">
-        <a href="images/gallery-3.png" class="image-popup">
-          <img src="images/gallery-3.png" class="img-fluid rounded" />
-        </a>
+  <section class="gallery-section py-5" id="gallery-section">
+    <div class="container">
+      <h6 class="text-center">Gallery</h6>
+      <h2 class="text-center fw-bold mb-4">
+        See Our Work in <span>Action</span>
+      </h2>
+      <div class="text-center mb-4">
+        <div class="tabs d-inline-flex">
+          <button class="tab-btn active" data-filter="factory">Factory</button>
+          <button class="tab-btn" data-filter="products">Products</button>
+          <button class="tab-btn" data-filter="team">Team</button>
+        </div>
       </div>
 
-      <!-- Row 2 -->
+      <div class="row g-3 gallery">
+        <!-- Factory Items -->
+        <div class="col-12 col-md-4 gallery-item" data-category="factory">
+          <a href="images/gallery-1.png" class="image-popup">
+            <img src="images/gallery-1.png" class="img-fluid rounded" />
+          </a>
+        </div>
+        <div class="col-12 col-md-4 gallery-item" data-category="factory">
+          <a href="images/gallery-2.png" class="image-popup">
+            <img src="images/gallery-2.png" class="img-fluid rounded" />
+          </a>
+        </div>
+        <div class="col-12 col-md-4 gallery-item" data-category="factory">
+          <a href="images/gallery-3.png" class="image-popup">
+            <img src="images/gallery-3.png" class="img-fluid rounded" />
+          </a>
+        </div>
+
+        <!-- Row 2 -->
         <div class="col-12 col-md-8 gallery-item" data-category="factory">
           <a href="images/gallery-4.png" class="image-popup">
             <img src="images/gallery-4.png" class="img-fluid rounded" />
@@ -598,7 +622,7 @@
           </a>
         </div>
 
-         <!-- Row 3 -->
+        <!-- Row 3 -->
         <div class="col-12 col-md-4 gallery-item" data-category="factory">
           <a href="images/gallery-6.png" class="image-popup">
             <img src="images/gallery-6.png" class="img-fluid rounded" />
@@ -615,24 +639,24 @@
           </a>
         </div>
 
-      <!-- Products Items -->
-      <div class="col-12 col-md-4 gallery-item d-none" data-category="products">
-        <a href="images/product-1.webp" class="image-popup">
-          <img src="images/product-1.webp" class="img-fluid rounded" />
-        </a>
-      </div>
-      <div class="col-12 col-md-4 gallery-item d-none" data-category="products">
-        <a href="images/product-2.webp" class="image-popup">
-          <img src="images/product-2.webp" class="img-fluid rounded" />
-        </a>
-      </div>
-      <div class="col-12 col-md-4 gallery-item d-none" data-category="products">
-        <a href="images/product-3.webp" class="image-popup">
-          <img src="images/product-3.webp" class="img-fluid rounded" />
-        </a>
-      </div>
+        <!-- Products Items -->
+        <div class="col-12 col-md-4 gallery-item d-none" data-category="products">
+          <a href="images/product-1.webp" class="image-popup">
+            <img src="images/product-1.webp" class="img-fluid rounded" />
+          </a>
+        </div>
+        <div class="col-12 col-md-4 gallery-item d-none" data-category="products">
+          <a href="images/product-2.webp" class="image-popup">
+            <img src="images/product-2.webp" class="img-fluid rounded" />
+          </a>
+        </div>
+        <div class="col-12 col-md-4 gallery-item d-none" data-category="products">
+          <a href="images/product-3.webp" class="image-popup">
+            <img src="images/product-3.webp" class="img-fluid rounded" />
+          </a>
+        </div>
 
-      <!-- Row 2 -->
+        <!-- Row 2 -->
         <div class="col-12 col-md-8 gallery-item" data-category="products">
           <a href="images/product-8.webp" class="image-popup">
             <img src="images/product-8.webp" class="img-fluid rounded" />
@@ -661,25 +685,25 @@
           </a>
         </div>
 
-      <!-- Team Items -->
-      <div class="col-12 col-md-4 gallery-item d-none" data-category="team">
-        <a href="images/team-1.jpg" class="image-popup">
-          <img src="images/team-1.jpg" class="img-fluid rounded" />
-        </a>
-      </div>
-      <div class="col-12 col-md-4 gallery-item d-none" data-category="team">
-        <a href="images/team-2.jpg" class="image-popup">
-          <img src="images/team-2.jpg" class="img-fluid rounded" />
-        </a>
-      </div>
-      <div class="col-12 col-md-4 gallery-item d-none" data-category="team">
-        <a href="images/team-3.jpg" class="image-popup">
-          <img src="images/team-3.jpg" class="img-fluid rounded" />
-        </a>
+        <!-- Team Items -->
+        <div class="col-12 col-md-4 gallery-item d-none" data-category="team">
+          <a href="images/team-1.jpg" class="image-popup">
+            <img src="images/team-1.jpg" class="img-fluid rounded" />
+          </a>
+        </div>
+        <div class="col-12 col-md-4 gallery-item d-none" data-category="team">
+          <a href="images/team-2.jpg" class="image-popup">
+            <img src="images/team-2.jpg" class="img-fluid rounded" />
+          </a>
+        </div>
+        <div class="col-12 col-md-4 gallery-item d-none" data-category="team">
+          <a href="images/team-3.jpg" class="image-popup">
+            <img src="images/team-3.jpg" class="img-fluid rounded" />
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
   <!-- ===================================Footer starts here========================== -->
@@ -723,7 +747,8 @@
             <h6>Company</h6>
             <a href="#hero-wrapper">Home</a>
             <a href="#video-section">Process</a>
-            <a href="#shoe-last-section">Product <span class="badge-new">New</span></a>
+            <a href="#shoe-last-section">Product
+            </a>
           </div>
         </div>
 
@@ -765,9 +790,9 @@
 
 
   <!-- whatsapp icon  -->
-   <a href="https://wa.me/+919372637273" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-  <i class="fab fa-whatsapp"></i>
-</a>
+  <a href="https://wa.me/+919372637273" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
 
   <!-- jQuery + Slick JS CDN -->
@@ -789,7 +814,7 @@
   <script>
     AOS.init();
   </script>
-  
+
 </body>
 
 </html>

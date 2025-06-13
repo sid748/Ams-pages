@@ -94,11 +94,11 @@ const contentArray = [
     img: 'images/About-us.png'
   },
   {
-    text: 'Our mission is to redefine the standards of footwear components by innovating with precision and ensuring sustainability throughout our manufacturing process.',
+    text: 'Our mission is to design and manufacture high-precision plastic shoe lasts that meet the evolving needs of global footwear makers. We aim to deliver unmatched quality, innovation, and consistency through cutting-edge technology, skilled craftsmanship, and customer-first service.',
     img: 'images/About-us-2.webp'
   },
   {
-    text: 'We envision a world where every footwear brand can rely on our shoe lasts for unmatched durability, accuracy, and customer satisfaction.',
+    text: 'Our vision is to become the most trusted and technologically advanced shoe last manufacturer worldwide. We strive to drive excellence in footwear production by continuously improving our processes, embracing innovation, and contributing to a future built on quality, sustainability, and precision.',
     img: 'images/About-us-3.webp'
   }
 ];
