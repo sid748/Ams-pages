@@ -799,8 +799,8 @@ body{
 
 .shoe-last-section .section-title {
   text-align: center;
-  font-size: 2.5rem;
-  font-weight: 600;
+  font-size: 2.15rem;
+  font-weight: 500;
   color: #1d1d1d;
   margin-bottom: 40px !important;
 }
@@ -1272,8 +1272,8 @@ body{
     }
 
     .industry-section h2 {
-      font-size: 40px;
-      font-weight: 600;
+      font-size: 34px;
+      font-weight: 500;
       margin-bottom: 40px;
       text-align: left;
     }
@@ -1583,8 +1583,8 @@ body{
   text-transform: uppercase;
 }
 .gallery-section h2 {
-  font-size: 2.5rem;
-  font-weight: 600 !important;
+  font-size: 2.15rem;
+  font-weight: 500 !important;
   color: #000;
 }
 
