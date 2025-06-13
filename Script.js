@@ -1,24 +1,24 @@
 // navigation bar functionality
-  
-  const burger = document.getElementById("burgerToggle");
-  const menu = document.getElementById("mobileMenu");
-  const closeBtn = document.getElementById("closeMenu");
 
-  burger.addEventListener("click", () => {
-    menu.classList.add("show");
-    document.body.style.overflow = 'hidden';
-  });
+const burger = document.getElementById("burgerToggle");
+const menu = document.getElementById("mobileMenu");
+const closeBtn = document.getElementById("closeMenu");
 
-  closeBtn.addEventListener("click", () => {
-    menu.classList.remove("show");
-    document.body.style.overflow = 'auto';
-  });
+burger.addEventListener("click", () => {
+  menu.classList.add("show");
+  document.body.style.overflow = 'hidden';
+});
+
+closeBtn.addEventListener("click", () => {
+  menu.classList.remove("show");
+  document.body.style.overflow = 'auto';
+});
 
 
 
 
 //  types of last section here
- const listItems = document.querySelectorAll('.custom-list-item');
+const listItems = document.querySelectorAll('.custom-list-item');
 const shoeImage = document.querySelector('.shoe-image');
 const imageText = document.querySelector('.image-text');
 
@@ -95,11 +95,11 @@ const contentArray = [
   },
   {
     text: 'Our mission is to redefine the standards of footwear components by innovating with precision and ensuring sustainability throughout our manufacturing process.',
-    img: 'images/About-us.png'
+    img: 'images/About-us-2.webp'
   },
   {
     text: 'We envision a world where every footwear brand can rely on our shoe lasts for unmatched durability, accuracy, and customer satisfaction.',
-    img: 'images/About-us.png'
+    img: 'images/About-us-3.webp'
   }
 ];
 
@@ -108,21 +108,14 @@ tabs.forEach(tab => {
     tabs.forEach(t => t.classList.remove('active'));
     tab.classList.add('active');
 
-    const index = parseInt(tab.dataset.index);
-    tabText.style.opacity = 0;
-    tabImage.style.opacity = 0;
-
-    setTimeout(() => {
-      tabText.textContent = contentArray[index].text;
-      tabImage.src = contentArray[index].img;
-      tabText.style.opacity = 1;
-      tabImage.style.opacity = 1;
-    }, 300);
+    const index = parseInt(tab.dataset.index, 10);
+    tabText.textContent = contentArray[index].text;
+    tabImage.src = contentArray[index].img;
   });
 });
 
 // partner slider functionality
- $(document).ready(function(){
+$(document).ready(function () {
   $('.partner-slider').slick({
     slidesToShow: 5,
     slidesToScroll: 1,
@@ -158,7 +151,7 @@ tabs.forEach(tab => {
 });
 
 // testimonial slider functionality
-  $(document).ready(function(){
+$(document).ready(function () {
   $('.testimonial-slider').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -184,71 +177,96 @@ tabs.forEach(tab => {
 });
 
 
-  // counter starts here
- const counters = document.querySelectorAll('.stat-number');
-  let started = false;
+// counter starts here
+const counters = document.querySelectorAll('.stat-number');
+let started = false;
 
-  function runCounter() {
-    counters.forEach(counter => {
-      const target = +counter.getAttribute('data-target');
-      const suffix = counter.getAttribute('data-suffix') || '';
-      const numberSpan = counter.querySelector('.number');
-      const suffixSpan = counter.querySelector('.suffix');
+function runCounter() {
+  counters.forEach(counter => {
+    const target = +counter.getAttribute('data-target');
+    const suffix = counter.getAttribute('data-suffix') || '';
+    const numberSpan = counter.querySelector('.number');
+    const suffixSpan = counter.querySelector('.suffix');
 
-      let count = 0;
-      const increment = Math.ceil(target / 100);
+    let count = 0;
+    const increment = Math.ceil(target / 100);
 
-      const update = () => {
-        if (count < target) {
-          count += increment;
-          if (count > target) count = target;
-          numberSpan.textContent = count;
-          suffixSpan.textContent = suffix;
-          requestAnimationFrame(update);
-        } else {
-          numberSpan.textContent = target;
-          suffixSpan.textContent = suffix;
-        }
-      };
-
-      update();
-    });
-  }
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !started) {
-        started = true;
-        runCounter();
+    const update = () => {
+      if (count < target) {
+        count += increment;
+        if (count > target) count = target;
+        numberSpan.textContent = count;
+        suffixSpan.textContent = suffix;
+        requestAnimationFrame(update);
+      } else {
+        numberSpan.textContent = target;
+        suffixSpan.textContent = suffix;
       }
-    });
-  }, {
-    threshold: 0.4,
-  });
+    };
 
-  const targetSection = document.querySelector('#counter-section');
-  if (targetSection) observer.observe(targetSection);
+    update();
+  });
+}
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !started) {
+      started = true;
+      runCounter();
+    }
+  });
+}, {
+  threshold: 0.4,
+});
+
+const targetSection = document.querySelector('#counter-section');
+if (targetSection) observer.observe(targetSection);
 
 // Gallery and tab functionality
 
 
-  $(document).ready(function () {
-    // Popup gallery
-    $('.image-popup').magnificPopup({
-      type: 'image',
-      gallery: { enabled: true }
+$(document).ready(function () {
+  // Popup gallery
+  $('.image-popup').magnificPopup({
+    type: 'image',
+    gallery: { enabled: true }
+  });
+
+  // Tab click handler
+  $('.tab-btn').click(function () {
+    const selected = $(this).data('filter');
+
+    // Activate tab
+    $('.tab-btn').removeClass('active');
+    $(this).addClass('active');
+
+    // Show selected category
+    $('.gallery-item').addClass('d-none');
+    $('.gallery-item[data-category="' + selected + '"]').removeClass('d-none');
+  });
+});
+
+// video popup functionality
+document.addEventListener("DOMContentLoaded", function () {
+    const playButton = document.getElementById("playButton");
+    const closeVideo = document.getElementById("closeVideo");
+    const videoContainer = document.getElementById("videoContainer");
+    const videoThumbnail = document.getElementById("videoThumbnail");
+    const mainVideo = document.getElementById("mainVideo");
+
+    playButton.addEventListener("click", function () {
+      videoContainer.style.display = "block";
+      videoThumbnail.style.display = "none";
+      playButton.style.display = "none";
+      mainVideo.play();
     });
 
-    // Tab click handler
-    $('.tab-btn').click(function () {
-      const selected = $(this).data('filter');
-
-      // Activate tab
-      $('.tab-btn').removeClass('active');
-      $(this).addClass('active');
-
-      // Show selected category
-      $('.gallery-item').addClass('d-none');
-      $('.gallery-item[data-category="' + selected + '"]').removeClass('d-none');
+    closeVideo.addEventListener("click", function () {
+      mainVideo.pause();
+      mainVideo.currentTime = 0;
+      videoContainer.style.display = "none";
+      videoThumbnail.style.display = "block";
+      playButton.style.display = "flex";
     });
   });
+
