@@ -17,13 +17,13 @@ closeBtn.addEventListener("click", () => {
 
 
 
-//  types of last section here
 const listItems = document.querySelectorAll('.custom-list-item');
 const shoeImage = document.querySelector('.shoe-image');
 const imageText = document.querySelector('.image-text');
 
 let currentIndex = 0;
 let autoTimer;
+const slideDuration = 6000; // Match progress bar animation
 
 function resetProgressBars() {
   listItems.forEach(item => {
@@ -33,10 +33,11 @@ function resetProgressBars() {
   });
 }
 
-function animateProgressBar(index, duration = 5000) {
+function animateProgressBar(index) {
   const bar = listItems[index].querySelector('.progress-bar-line');
+  // Start animation after 10ms
   setTimeout(() => {
-    bar.style.transition = `width ${duration}ms linear`;
+    bar.style.transition = `width ${slideDuration}ms linear`;
     bar.style.width = '100%';
   }, 10);
 }
@@ -58,29 +59,34 @@ function updateDisplay(index) {
   currentIndex = index;
 }
 
-function nextSlide() {
-  currentIndex = (currentIndex + 1) % listItems.length;
+// This replaces nextSlide + setInterval
+function autoplaySlides() {
   updateDisplay(currentIndex);
-}
 
-function startAutoPlay() {
-  updateDisplay(currentIndex);
-  autoTimer = setInterval(nextSlide, 6000);
+  autoTimer = setTimeout(() => {
+    currentIndex = (currentIndex + 1) % listItems.length;
+    autoplaySlides(); // recursively call for the next slide
+  }, slideDuration);
 }
 
 function stopAutoPlay() {
-  clearInterval(autoTimer);
+  clearTimeout(autoTimer);
 }
 
+// Click handler also resets timer properly
 listItems.forEach((item, index) => {
   item.addEventListener('click', () => {
     stopAutoPlay();
     updateDisplay(index);
-    setTimeout(startAutoPlay, 8000);
+    currentIndex = index;
+    setTimeout(() => {
+      autoplaySlides();
+    }, slideDuration + 100); // Wait until progress bar finishes
   });
 });
 
-startAutoPlay();
+autoplaySlides(); // 🔁 start autoplay
+
 
 
 // about us tab functionality
