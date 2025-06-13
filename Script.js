@@ -30,7 +30,7 @@ closeBtn.addEventListener("click", () => {
 
 
 
-
+// types of shoes slider functionality
 const listItems = document.querySelectorAll('.custom-list-item');
 const shoeImage = document.querySelector('.shoe-image');
 const imageText = document.querySelector('.image-text');
