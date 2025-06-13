@@ -15,6 +15,38 @@ body{
    font-family: "Poppins", sans-serif !important;
 }
 
+#site-header {
+  position: relative;
+  z-index: 999;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+#site-header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000; /* Match your original navbar background */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  animation: slideDown 0.3s ease forwards;
+}
+
+/* Smooth slide down animation */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+/* Prevent content from jumping when header becomes sticky */
+body.sticky-header-padding {
+  padding-top: 80px; /* Adjust this to your navbar height */
+}
+
+
   .hero-wrapper {
       background: linear-gradient(253.06deg, #C0A18F 0%, #E8CCBF 21.79%, #AD8B7A 45.56%, #8C6D5A 72.3%, #7B5C4A 98.41%);
       color: #fff;
@@ -94,16 +126,31 @@ body{
 
 
 .nav-link {
-    display: block;
-    padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
-    font-size: var(--bs-nav-link-font-size);
-    font-weight: var(--bs-nav-link-font-weight);
-    color: #ffffff !important;
-    text-decoration: none;
-    background: 0 0;
-    border: 0;
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  padding-bottom: 4px;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 0;
+  height: 2px;
+  background-color: #fff; /* Change to your theme color */
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
 
 /* Mobile Offcanvas */
 .custom-offcanvas {

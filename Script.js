@@ -14,6 +14,20 @@ closeBtn.addEventListener("click", () => {
   document.body.style.overflow = 'auto';
 });
 
+// sticky header functionality
+ window.addEventListener("scroll", function () {
+    const header = document.getElementById("site-header");
+    const body = document.body;
+
+    if (window.scrollY > 100) {
+      header.classList.add("sticky");
+      body.classList.add("sticky-header-padding");
+    } else {
+      header.classList.remove("sticky");
+      body.classList.remove("sticky-header-padding");
+    }
+  });
+
 
 
 
