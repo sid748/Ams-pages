@@ -226,47 +226,51 @@ if (targetSection) observer.observe(targetSection);
 
 
 $(document).ready(function () {
-  // Popup gallery
+  // Initialize Magnific Popup
   $('.image-popup').magnificPopup({
     type: 'image',
     gallery: { enabled: true }
   });
 
+  // Show images for active tab
+  function showSelectedCategory() {
+    const selected = $('.tab-btn.active').data('filter');
+    $('.gallery-item').addClass('d-none');
+    $(`.gallery-item[data-category="${selected}"]`).removeClass('d-none');
+  }
+
   // Tab click handler
   $('.tab-btn').click(function () {
-    const selected = $(this).data('filter');
-
-    // Activate tab
     $('.tab-btn').removeClass('active');
     $(this).addClass('active');
-
-    // Show selected category
-    $('.gallery-item').addClass('d-none');
-    $('.gallery-item[data-category="' + selected + '"]').removeClass('d-none');
+    showSelectedCategory();
   });
+
+  // Display for default active tab
+  showSelectedCategory();
 });
 
-// video popup functionality
-document.addEventListener("DOMContentLoaded", function () {
-    const playButton = document.getElementById("playButton");
-    const closeVideo = document.getElementById("closeVideo");
-    const videoContainer = document.getElementById("videoContainer");
-    const videoThumbnail = document.getElementById("videoThumbnail");
-    const mainVideo = document.getElementById("mainVideo");
+// // video popup functionality
+// document.addEventListener("DOMContentLoaded", function () {
+//     const playButton = document.getElementById("playButton");
+//     const closeVideo = document.getElementById("closeVideo");
+//     const videoContainer = document.getElementById("videoContainer");
+//     const videoThumbnail = document.getElementById("videoThumbnail");
+//     const mainVideo = document.getElementById("mainVideo");
 
-    playButton.addEventListener("click", function () {
-      videoContainer.style.display = "block";
-      videoThumbnail.style.display = "none";
-      playButton.style.display = "none";
-      mainVideo.play();
-    });
+//     playButton.addEventListener("click", function () {
+//       videoContainer.style.display = "block";
+//       videoThumbnail.style.display = "none";
+//       playButton.style.display = "none";
+//       mainVideo.play();
+//     });
 
-    closeVideo.addEventListener("click", function () {
-      mainVideo.pause();
-      mainVideo.currentTime = 0;
-      videoContainer.style.display = "none";
-      videoThumbnail.style.display = "block";
-      playButton.style.display = "flex";
-    });
-  });
+//     closeVideo.addEventListener("click", function () {
+//       mainVideo.pause();
+//       mainVideo.currentTime = 0;
+//       videoContainer.style.display = "none";
+//       videoThumbnail.style.display = "block";
+//       playButton.style.display = "flex";
+//     });
+//   });
 
