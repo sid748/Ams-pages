@@ -868,6 +868,7 @@ body{
   align-items: center;
   gap: 8px;
   font-weight: 500;
+  font-size: 20px;
 }
 
 .item-arrow {
@@ -1203,7 +1204,7 @@ body{
 .video-wrapper {
   position: relative;
   width: 100%;
-  max-height: 80vh;
+  max-height: 95vh;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
