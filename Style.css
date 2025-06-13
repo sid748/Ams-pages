@@ -1219,14 +1219,14 @@ body{
   max-height: 100vh;
 }
 
-/* Fullscreen background layout (optional) */
+
 .video-wrapper:before {
   content: "";
   display: block;
-  padding-top: 56.25%; /* 16:9 aspect ratio */
+  padding-top: 56.25%; 
 }
 
-/* Override absolute video */
+
 .video-wrapper video {
   position: absolute;
   top: 0;
