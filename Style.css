@@ -358,7 +358,7 @@
 
   .hero-image {
     position: static;
-    margin-top: 60px;
+    /* margin-top: 60px; */
     text-align: center;
   }
 
