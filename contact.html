@@ -18,10 +18,12 @@
   <!-- aos link here -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-   <!-- font links here -->
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <!-- font links here -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
 
 
@@ -170,34 +172,44 @@
       <div class="col-lg-6" data-aos="fade-up" data-aos-duration="3000">
         <div class="contact-form-box">
           <h2>Let’s Build a Partnership</h2>
-          <p>We’d love to hear from you! Whether you have partnership inquiries or general <br>questions, simply fill
+          <p>We’d love to hear from you! Whether you have partnership inquiries or general questions, simply fill
             out the form below, and our team will get back to you shortly.</p>
-          <form action="mailto:agra@amslast.com" method="POST" enctype="text/plain">
+          <form action="contact-form-handler.php" method="POST" novalidate>
             <div class="row mb-4">
               <div class="col-md-6 state">
-                <input type="text" name="name" class="form-control" placeholder="Your Name*" required>
+                <input type="text" name="name" class="form-control" placeholder="Your Name*" required
+                  pattern="^[a-zA-Z\s]{2,50}$" title="Name should only contain letters and spaces.">
               </div>
               <div class="col-md-6">
-                <input type="tel" name="phone" class="form-control" placeholder="Your Phone Number*" required>
+                <input type="tel" name="phone" class="form-control" placeholder="Your Phone Number*" required
+                  pattern="[0-9]{10}" maxlength="10" title="Enter exactly 10 digits.">
               </div>
             </div>
+
             <div class="mb-4">
-              <input type="email" name="email" class="form-control" placeholder="Your Email*" required>
+              <input type="email" name="email" class="form-control" placeholder="Your Email*" required
+                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Enter a valid email address.">
             </div>
+
             <div class="mb-4">
-              <input type="text" name="website" class="form-control" placeholder="Company’s Website Link">
+              <input type="text" name="website" class="form-control" placeholder="Company’s Website Link"
+                pattern="https?://.+" title="Enter a valid URL starting with http:// or https://">
             </div>
+
             <div class="mb-4">
-              <textarea name="message" rows="4" class="form-control" placeholder="Write Us"></textarea>
+              <textarea name="message" rows="4" class="form-control" placeholder="Write Us" maxlength="700" required
+                title="Message should not exceed 700 characters."></textarea>
             </div>
-            <!-- <button type="submit" class="submit-btn">Submit <i class="fa-solid fa-arrow-right"></i></button> -->
+
             <button type="submit" class="contact-btn submit-style mt-2 me-3">
               <span class="hover-arrow-left"><i class="fa-solid fa-arrow-right me-2"></i></span>
               <span class="btn-text">Submit</span>
               <span class="hover-arrow-right"><i class="fa-solid fa-arrow-right ms-2"></i></span>
             </button>
-
           </form>
+
+
+
         </div>
       </div>
     </div>
@@ -216,7 +228,7 @@
                 <i class="fa-solid fa-location-dot"></i>
               </div>
               <h6>Unit 1 – Agra</h6>
-              <p>Plot No. 593, Hirala ki piyau,<br>Behind RN Bajaj, Agra Mathura road,<br>Artoni, Agra-282007</p>
+              <p>Plot No. 593, Hirala ki piyau,Behind RN Bajaj, Agra Mathura road,Artoni, Agra-282007</p>
               <p class="pb-2"><strong>agra@amslast.com</strong></p>
               <a href="https://maps.app.goo.gl/dXjMuj2AW74XAzV2A" class="contact-btn location-style" target="_blank">
                 <span class="hover-arrow-left"><i class="fa-solid fa-arrow-right me-2"></i></span>
@@ -271,7 +283,7 @@
               </div>
               <h6>Unit 3 – Delhi</h6>
               <p>38,GF Khasra No. 98/2 Rani Khera, karala Marg, Swam Park, Mundka.
-                New Delhi </p>
+                New Delhi 110041 </p>
               <p class="pb-2"><strong>agra@amslast.com</strong></p>
               <a href="https://maps.app.goo.gl/6gDWBUYiBkXTFomU8" class="contact-btn location-style" target="_blank">
                 <span class="hover-arrow-left"><i class="fa-solid fa-arrow-right me-2"></i></span>
@@ -281,10 +293,43 @@
             </div>
           </div>
           <div class="col-md-6">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d902229.0302239154!2d76.78496312889268!3d27.953112283671135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d05c119aec249%3A0xee89f7cc5ba33ae2!2sS%2F359%2F1%2C%20Friends%20Colony%2C%20Mundka%2C%20New%20Delhi%2C%20Delhi%2C%20110041!5e0!3m2!1sen!2sin!4v1749706575430!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d902229.0302239154!2d76.78496312889268!3d27.953112283671135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d05c119aec249%3A0xee89f7cc5ba33ae2!2sS%2F359%2F1%2C%20Friends%20Colony%2C%20Mundka%2C%20New%20Delhi%2C%20Delhi%2C%20110041!5e0!3m2!1sen!2sin!4v1749706575430!5m2!1sen!2sin"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
+
+
+      <!-- Location 4 -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-duration="3000">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <div class="location-card">
+              <div class="icon-box">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <h6>Unit 4 – Noida</h6>
+              <p>85, A Block Rd, Block A, Sector 64, Noida, Uttar Pradesh 201307</p>
+              <p class="pb-2"><strong>agra@amslast.com</strong></p>
+              <a href="https://maps.app.goo.gl/o2DJUdcHBqH2PnYq6" class="contact-btn location-style" target="_blank">
+                <span class="hover-arrow-left"><i class="fa-solid fa-arrow-right me-2"></i></span>
+                <span class="btn-text">Get Location</span>
+                <span class="hover-arrow-right"><i class="fa-solid fa-arrow-right ms-2"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.618086294766!2d77.37867779999999!3d28.611231999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cefc3abf8a87b%3A0x4582b520e1628793!2sAms%20component%20industries!5e0!3m2!1sen!2sin!4v1750050791126!5m2!1sen!2sin"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+
+
 
 
     </div>
@@ -292,7 +337,7 @@
 
   <!-- ===================================Footer starts here========================== -->
   <!-- FOOTER HTML -->
-   <footer class="footer pt-5 pb-2">
+  <footer class="footer pt-5 pb-2">
     <div class="container pt-5">
       <div class="row gy-4 align-items-start">
 
@@ -372,7 +417,7 @@
     </div>
   </footer>
 
-   <!-- whatsapp icon  -->
+  <!-- whatsapp icon  -->
   <a href="https://wa.me/+919372637273" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
