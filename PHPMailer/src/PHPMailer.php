@@ -1,3 +1,0 @@
-<?php
-// PHPMailer class stub
-?>

@@ -78,11 +78,12 @@
     }
   </style>
   <div class="container hero-wrapper new-header" id="hero-wrapper">
-    <nav class="navbar navbar-expand-lg navbar-dark  ">
-      <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg" id="site-header">
+      <div class="container">
         <!-- Logo -->
         <a class="navbar-brand" href="index.html">
-          <img src="images/AMS_logo-1.png" alt="AMS Logo" height="60" />
+          <img src="images/AMS_logo-1.png" alt="AMS Logo" height="60" id="defaultLogo" />
+          <img src="images/Ams_logo-2.png" alt="AMS Logo Dark" height="60" id="scrolledLogo" style="display: none;" />
         </a>
 
         <!-- Toggler -->
@@ -102,18 +103,17 @@
             </ul>
           </div>
           <div class="d-flex align-items-center">
-            <button class="contact-btn me-3 ">
-              <a href="contact.html" class="text-decoration-none"><span class="hover-arrow-left"><i
-                    class="fa-solid fa-arrow-right me-2"></i></span>
+            <button class="contact-btn me-3">
+              <a href="contact.html" class="text-decoration-none">
+                <span class="hover-arrow-left"><i class="fa-solid fa-arrow-right me-2"></i></span>
                 <span class="btn-text">Contact Us</span>
-                <span class="hover-arrow-right"><i class="fa-solid fa-arrow-right ms-2"></i></span></a>
+                <span class="hover-arrow-right"><i class="fa-solid fa-arrow-right ms-2"></i></span>
+              </a>
             </button>
-            </a>
           </div>
         </div>
 
-
-        <!-- Custom Mobile Menu -->
+        <!-- Custom Mobile Menu (unchanged) -->
         <div class="custom-offcanvas" id="mobileMenu">
           <button type="button" class="close-btn" id="closeMenu">&times;</button>
           <ul class="navbar-nav text-center">
@@ -122,19 +122,17 @@
             <li class="nav-item"><a class="nav-link" href="index.html#shoe-last-section">PRODUCTS</a></li>
             <li class="nav-item"><a class="nav-link" href="index.html#video-section">PROCESS</a></li>
             <li class="nav-item"><a class="nav-link" href="index.html#gallery-section">GALLERY</a></li>
-
-            <!-- Contact Button Right Below Gallery -->
             <li class="nav-item mt-2">
-              <button class="contact-btn mt-2 me-3 ">
-                <a href="contact.html" class="text-decoration-none"><span class="hover-arrow-left"><i
-                      class="fa-solid fa-arrow-right me-2"></i></span>
+              <button class="contact-btn mt-2 me-3">
+                <a href="contact.html" class="text-decoration-none">
+                  <span class="hover-arrow-left"><i class="fa-solid fa-arrow-right me-2"></i></span>
                   <span class="btn-text">Contact Us</span>
-                  <span class="hover-arrow-right"><i class="fa-solid fa-arrow-right ms-2"></i></span></a>
+                  <span class="hover-arrow-right"><i class="fa-solid fa-arrow-right ms-2"></i></span>
+                </a>
               </button>
             </li>
           </ul>
         </div>
-
       </div>
     </nav>
   </div>
@@ -342,7 +340,7 @@
       <div class="row gy-4 align-items-start">
 
         <!-- Contact Section -->
-        <div class=" col-xl-3 col-lg-4 col-md-6 col-sm-12">
+        <div class=" col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
           <div class="footer-logo text-start">
             <a href="#hero-wrapper">
               <img src="images/AMS_logo.png" alt="AMS Logo" class="img-fluid">
@@ -361,38 +359,38 @@
         </div>
 
         <!-- See More Section -->
-        <div class=" col-xl-2 col-lg-4 col-md-6 col-sm-6 col-6">
+        <div class=" col-xl-3 col-lg-3 col-md-3 col-sm-4 col-4">
           <div class="footer-section">
             <h6>See More</h6>
-            <a href="#gallery-section">Gallery</a>
-            <a href="#about-container">About Us</a>
-            <a href="#counter-section">Why Choose Us</a>
+            <a href="index.html#gallery-section">Gallery</a>
+            <a href="index.html#about-container">About Us</a>
+            <a href="index.html#counter-section">Why Choose Us</a>
           </div>
         </div>
 
         <!-- Company Section -->
-        <div class=" col-xl-2 col-lg-4 col-md-3 col-sm-6 col-6">
+        <div class=" col-xl-2 col-lg-2 col-md-2 col-sm-4 col-4">
           <div class="footer-section">
             <h6>Company</h6>
-            <a href="#hero-wrapper">Home</a>
-            <a href="#video-section">Process</a>
-            <a href="#shoe-last-section">Product
+            <a href="index.html#hero-wrapper">Home</a>
+            <a href="index.html#video-section">Process</a>
+            <a href="index.html#shoe-last-section">Product
             </a>
           </div>
         </div>
 
         <!-- Resources Section -->
-        <div class=" col-xl-2 col-lg-4 col-md-3 col-sm-6 col-4">
+        <div class=" col-xl-2 col-lg-2 col-md-2 col-sm-4 col-4">
           <div class="footer-section">
             <h6>Resources</h6>
-            <a href="#brand-slider">Clients</a>
-            <a href="contact.html">Contact</a>
-            <a href="#industry-section">Industries</a>
+            <a href="index.html#brand-slider">Clients</a>
+            <a href="contact.html#site-header">Contact</a>
+            <a href="index.html#industry-section">Industries</a>
           </div>
         </div>
 
         <!-- Social Media Section -->
-        <div class=" col-xl-3 col-lg-6 col-md-6 col-sm-6 col-8">
+        <!-- <div class=" col-xl-3 col-lg-6 col-md-6 col-sm-6 col-8">
           <div class="social-icon">
             <div class="circle"><i class="fab fa-facebook-f"></i></div>
             Follow us on Facebook
@@ -405,7 +403,7 @@
             <div class="circle"><i class="fab fa-linkedin-in"></i></div>
             Follow us on LinkedIn
           </div>
-        </div>
+        </div> -->
 
       </div>
 

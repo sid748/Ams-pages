@@ -1,3 +1,0 @@
-<?php
-// Exception class stub
-?>

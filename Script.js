@@ -18,13 +18,45 @@ closeBtn.addEventListener("click", () => {
  window.addEventListener("scroll", function () {
     const header = document.getElementById("site-header");
     const body = document.body;
+    const navLinks = document.querySelectorAll("#site-header .nav-link");
+    const logoDefault = document.getElementById("defaultLogo");
+    const logoScrolled = document.getElementById("scrolledLogo");
 
     if (window.scrollY > 100) {
       header.classList.add("sticky");
       body.classList.add("sticky-header-padding");
+
+      // Change text color of nav links
+      navLinks.forEach(link => link.style.color = "#A57865");
+
+      // Show scrolled logo, hide default
+      if (logoDefault && logoScrolled) {
+        logoDefault.style.display = "none";
+        logoScrolled.style.display = "inline";
+      }
     } else {
       header.classList.remove("sticky");
       body.classList.remove("sticky-header-padding");
+
+      // Reset text color
+      navLinks.forEach(link => link.style.color = "black");
+
+      // Show default logo, hide scrolled
+      if (logoDefault && logoScrolled) {
+        logoDefault.style.display = "inline";
+        logoScrolled.style.display = "none";
+      }
+    }
+  });
+
+  // about container functionality
+  window.addEventListener("scroll", function () {
+    const aboutSection = document.getElementById("about-container");
+
+    if (window.scrollY > 100) {
+      aboutSection.style.marginTop = "55px";
+    } else {
+      aboutSection.style.marginTop = "0";
     }
   });
 
