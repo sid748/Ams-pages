@@ -1679,6 +1679,23 @@ i {
   }
 }
 
+/* certificate section here */
+.certificate-section {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff; 
+}
+
+.certificate-image {
+  max-width: 90%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+
 /* partner slider section section here */
 .brand-slider {
   padding: 40px 20px;
