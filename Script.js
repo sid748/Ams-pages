@@ -151,7 +151,7 @@ const contentArray = [
   },
   {
     text: 'Our vision is to become the most trusted and technologically advanced shoe last manufacturer worldwide. We strive to drive excellence in footwear production by continuously improving our processes, embracing innovation, and contributing to a future built on quality, sustainability, and precision.',
-    img: 'images/About-us-3.webp'
+    img: 'images/About-us-3.png'
   }
 ];
 
