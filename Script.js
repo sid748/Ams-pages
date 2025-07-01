@@ -1,18 +1,33 @@
-// navigation bar functionality
+// navbar functionality
 
-const burger = document.getElementById("burgerToggle");
-const menu = document.getElementById("mobileMenu");
-const closeBtn = document.getElementById("closeMenu");
+document.addEventListener("DOMContentLoaded", function () {
+  const burger = document.getElementById("burgerToggle");
+  const menu = document.getElementById("mobileMenu");
+  const closeBtn = document.getElementById("closeMenu");
 
-burger.addEventListener("click", () => {
-  menu.classList.add("show");
-  document.body.style.overflow = 'hidden';
+  if (burger && menu && closeBtn) {
+    burger.addEventListener("click", () => {
+      menu.classList.add("show");
+      document.body.style.overflow = "hidden";
+    });
+
+    closeBtn.addEventListener("click", () => {
+      menu.classList.remove("show");
+      document.body.style.overflow = "auto";
+    });
+
+    document.querySelectorAll("#mobileMenu .nav-link").forEach(link => {
+      link.addEventListener("click", () => {
+        menu.classList.remove("show");
+        document.body.style.overflow = "auto";
+      });
+    });
+  }
 });
 
-closeBtn.addEventListener("click", () => {
-  menu.classList.remove("show");
-  document.body.style.overflow = 'auto';
-});
+
+
+
 
 // sticky header functionality
  window.addEventListener("scroll", function () {
@@ -278,53 +293,38 @@ if (targetSection) observer.observe(targetSection);
 
 
 $(document).ready(function () {
-  // Initialize Magnific Popup
-  $('.image-popup').magnificPopup({
-    type: 'image',
-    gallery: { enabled: true }
-  });
-
-  // Show images for active tab
+  // Function to show images for the active tab
   function showSelectedCategory() {
     const selected = $('.tab-btn.active').data('filter');
+
+    // Hide all items
     $('.gallery-item').addClass('d-none');
-    $(`.gallery-item[data-category="${selected}"]`).removeClass('d-none');
+
+    // Show only selected category items
+    const $visibleItems = $(`.gallery-item[data-category="${selected}"]`);
+    $visibleItems.removeClass('d-none');
+
+    // Destroy existing popup
+    $('.image-popup').magnificPopup('destroy');
+
+    // Re-initialize popup only for visible images
+    $visibleItems.find('.image-popup').magnificPopup({
+      type: 'image',
+      gallery: { enabled: true }
+    });
   }
 
-  // Tab click handler
+  // Initial tab load
+  showSelectedCategory();
+
+  // Tab button click
   $('.tab-btn').click(function () {
     $('.tab-btn').removeClass('active');
     $(this).addClass('active');
     showSelectedCategory();
   });
-
-  // Display for default active tab
-  showSelectedCategory();
 });
 
-// // video popup functionality
-// document.addEventListener("DOMContentLoaded", function () {
-//     const playButton = document.getElementById("playButton");
-//     const closeVideo = document.getElementById("closeVideo");
-//     const videoContainer = document.getElementById("videoContainer");
-//     const videoThumbnail = document.getElementById("videoThumbnail");
-//     const mainVideo = document.getElementById("mainVideo");
-
-//     playButton.addEventListener("click", function () {
-//       videoContainer.style.display = "block";
-//       videoThumbnail.style.display = "none";
-//       playButton.style.display = "none";
-//       mainVideo.play();
-//     });
-
-//     closeVideo.addEventListener("click", function () {
-//       mainVideo.pause();
-//       mainVideo.currentTime = 0;
-//       videoContainer.style.display = "none";
-//       videoThumbnail.style.display = "block";
-//       playButton.style.display = "flex";
-//     });
-//   });
 
 
 
