@@ -184,11 +184,10 @@ i {
   height: 100vh;
   background-color: #000;
   z-index: 9999;
-  transition: right 0.3s ease-in-out;
+  transition: right 0.4s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
   flex-direction: column;
 }
 
@@ -212,7 +211,6 @@ i {
   color: #fff;
   background: none;
   border: none;
-  z-index: 10001;
   cursor: pointer;
 }
 

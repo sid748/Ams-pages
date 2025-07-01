@@ -1,32 +1,29 @@
 // navbar functionality
 
 document.addEventListener("DOMContentLoaded", function () {
-  const burger = document.getElementById("burgerToggle");
-  const menu = document.getElementById("mobileMenu");
-  const closeBtn = document.getElementById("closeMenu");
+    const burger = document.getElementById("burgerToggle");
+    const menu = document.getElementById("mobileMenu");
+    const closeBtn = document.getElementById("closeMenu");
 
-  if (burger && menu && closeBtn) {
-    burger.addEventListener("click", () => {
-      menu.classList.add("show");
-      document.body.style.overflow = "hidden";
-    });
+    if (burger && menu && closeBtn) {
+      burger.addEventListener("click", () => {
+        menu.classList.add("show");
+        document.body.style.overflow = "hidden";
+      });
 
-    closeBtn.addEventListener("click", () => {
-      menu.classList.remove("show");
-      document.body.style.overflow = "auto";
-    });
-
-    document.querySelectorAll("#mobileMenu .nav-link").forEach(link => {
-      link.addEventListener("click", () => {
+      closeBtn.addEventListener("click", () => {
         menu.classList.remove("show");
         document.body.style.overflow = "auto";
       });
-    });
-  }
-});
 
-
-
+      document.querySelectorAll("#mobileMenu .nav-link").forEach(link => {
+        link.addEventListener("click", () => {
+          menu.classList.remove("show");
+          document.body.style.overflow = "auto";
+        });
+      });
+    }
+  });
 
 
 // sticky header functionality
